@@ -256,6 +256,7 @@
 		<sysColor if="${system.theme} == 'multivision'">4959a0</sysColor>
 		<sysColor if="${system.theme} == 'mugen'">b93141</sysColor>
 		<sysColor if="${system.theme} == 'myvision'">d59234</sysColor>
+		<sysColor if="${system.theme} == 'mz2500'">6e726c</sysColor>
 		<sysColor if="${system.theme} == 'n501'">475752</sysColor>
 		<sysColor if="${system.theme} == 'n64'">1bb861</sysColor>
 		<sysColor if="${system.theme} == 'n64-jp'">1bb761</sysColor>
@@ -479,7 +480,6 @@
 		<sysColor if="${system.theme} == 'zinc'">39ddf4</sysColor>
 		<sysColor if="${system.theme} == 'zx81'">b92e34</sysColor>
 		<sysColor if="${system.theme} == 'zxspectrum'">8ea7ae</sysColor>
-		<sysColor if="${system.theme} == 'mz2500'">3886b3</sysColor>
 		<sysColor if="${system.theme} == 'sonic3-air'">3770b2</sysColor>
 		<sysColor if="${system.theme} == 'sonic-mania'">3770b2</sysColor>
 		<sysColor if="${system.theme} == '3players'">82cdea</sysColor>
