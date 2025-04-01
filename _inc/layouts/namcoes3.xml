@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<view name="system">
+		<image name="sysbg-left" extra="true">
+			<origin>0.5 0.5</origin>
+			<origin if="${screen.ratio} == '4/3'">0.35 0.4</origin>
+			<origin if="${screen.ratio} == '16/10'">0.5 0.4</origin>
+			<origin if="${screen.ratio} == '21/9'">0.14 0.5</origin>
+			<pos>0.305 0.45</pos>
+			<minSize>0.1 0.3</minSize>
+			<rotation>14</rotation>
+			<path>./../../_inc/images/space.png</path>
+			<zIndex>27</zIndex>
+			<storyboard>
+				<animation property="pos" to="0.025 0.45" begin="2000" duration="1000" mode="linear"/>
+			</storyboard>
+		</image>
+		<image name="sysbg-right" extra="true">
+			<origin>0.5 0.5</origin>
+			<origin if="${screen.ratio} == '4/3'">0.64 0.4</origin>
+			<origin if="${screen.ratio} == '16/10'">0.51 0.4</origin>
+			<origin if="${screen.ratio} == '21/9'">0.86 0.5</origin>
+			<pos>0.695 0.45</pos>
+			<minSize>0.1 0.3</minSize>
+			<rotation>-14</rotation>
+			<path>./../../_inc/images/space.png</path>
+			<zIndex>27</zIndex>
+			<storyboard>
+				<animation property="pos" to="0.415 0.45" begin="2000" duration="1000" mode="linear"/>
+			</storyboard>
+		</image>
+		<image name="sysbg-video-arcade" extra="true">
+			<color>000000</color>
+			<path>./../../_inc/images/space.png</path>
+			<zIndex>2</zIndex>
+			<origin>0.5 0.5</origin>
+			<origin if="${screen.ratio} == '4/3'">0.5 0.45</origin>
+			<origin if="${screen.ratio} == '16/10'">0.5 0.48</origin>
+			<pos>0.499 0.47</pos>
+			<size>0.32 0.22</size>
+			<size if="${screen.ratio} == '4/3'">0.31 0.17</size>
+			<size if="${screen.ratio} == '21/9'">0.24 0.22</size>
+			<storyboard>
+				<animation property="pos" to="0.219 0.47" begin="2000" duration="1000" mode="linear"/>
+			</storyboard>
+		</image>
+		<video name="videoboxarcade" extra="true">
+			<path>./../../_inc/anim/video/${system.theme}.mp4</path>
+			<path>./../../_inc/anim/video/${synonym}.mp4</path>
+			<!-- Loads platform video from addon directory, if available -->
+			<path>./../../../ckau-book-addons/_inc/anim/video/${system.theme}.mp4</path>
+			<path>./../../../ckau-book-addons/_inc/anim/video/${synonym}.mp4</path>
+			<delay>0</delay>
+			<effect>none</effect>
+			<origin>0.5 0.5</origin>
+			<origin if="${screen.ratio} == '4/3'">0.5 0.44</origin>
+			<origin if="${screen.ratio} == '16/10'">0.5 0.48</origin>
+			<pos>0.4998 0.47</pos>
+			<maxSize>0.305</maxSize>
+			<zIndex>26</zIndex>
+			<storyboard>
+				<animation property="pos" to="0.2198 0.47" begin="2000" duration="1000" mode="linear"/>
+			</storyboard>
+		</video>
+		<text name="TextDate" extra="true">
+			<text>2013</text>
+		</text>
+		<text name="TextManufacturer" extra="true">
+			<text>Namco</text>
+		</text>
+		<text name="TextName" extra="true">
+			<text>System ES3</text>
+		</text>
+		<text name="TextDesc" extra="true">
+			<text>The Namco ES3 arcade platform runs on an nForce2-based motherboard that NVIDIA developed. It is based on a NVIDIA GeForce graphics card, using the OpenGL API. It uses a modified Japanese version of Windows Embedded Standard 7 as the operating system.
+
+Namco ES3 games run in an arcade game cabinet designed by Bandai Namco Games.</text>
+			<text lang="pl">Platforma zręcznościowa Namco ES3 działa na płycie głównej opartej na układzie nForce2 opracowanym przez firmę NVIDIA. Opiera się ona na karcie graficznej NVIDIA GeForce, wykorzystującej API OpenGL. Jako system operacyjny wykorzystuje zmodyfikowaną japońską wersję Windows Embedded Standard 7.
+
+Gry Namco ES3 uruchamiane są w obudowie zaprojektowanej przez Bandai Namco Games.</text>
+			<text lang="ru">Аркадная платформа Namco ES3 работает на материнской плате на базе nForce2, разработанной компанией NVIDIA. В ее основе лежит видеокарта NVIDIA GeForce, использующая API OpenGL. В качестве операционной системы используется модифицированная японская версия Windows Embedded Standard 7.
+
+Игры Namco ES3 запускаются в аркадном игровом шкафу, разработанном компанией Bandai Namco Games.</text>
+			<text lang="es">La plataforma arcade Namco ES3 se ejecuta en una placa base basada en nForce2 que ha desarrollado NVIDIA. Se basa en una tarjeta gráfica NVIDIA GeForce que utiliza la API OpenGL. Utiliza una versión japonesa modificada de Windows Embedded Standard 7 como sistema operativo.
+
+Los juegos de Namco ES3 se ejecutan en una máquina recreativa diseñada por Bandai Namco Games.</text>
+			<text lang="de">Die Namco ES3 Arcade-Plattform läuft auf einem nForce2-basierten Motherboard, das von NVIDIA entwickelt wurde. Sie basiert auf einer NVIDIA GeForce-Grafikkarte und verwendet die OpenGL-API. Als Betriebssystem kommt eine modifizierte japanische Version von Windows Embedded Standard 7 zum Einsatz.
+
+Namco ES3-Spiele laufen in einem von Bandai Namco Games entworfenen Arcade-Gehäuse.</text>
+			<text lang="fr">La plate-forme d'arcade Namco ES3 fonctionne sur une carte mère nForce2 développée par NVIDIA. Elle est basée sur une carte graphique NVIDIA GeForce, utilisant l'API OpenGL. Elle utilise une version japonaise modifiée de Windows Embedded Standard 7 comme système d'exploitation.
+
+Les jeux Namco ES3 tournent dans une borne d'arcade conçue par Bandai Namco Games.</text>
+			<text lang="it">La piattaforma arcade Namco ES3 gira su una scheda madre basata su nForce2 sviluppata da NVIDIA. È basata su una scheda grafica NVIDIA GeForce, che utilizza le API OpenGL. Utilizza una versione giapponese modificata di Windows Embedded Standard 7 come sistema operativo.
+
+I giochi Namco ES3 vengono eseguiti in un cabinet di gioco arcade progettato da Bandai Namco Games.</text>
+			<text lang="pt">A plataforma de fliperama Namco ES3 funciona em uma placa-mãe baseada no chipset nForce2 desenvolvido pela NVIDIA. Ela se baseia na placa gráfica NVIDIA GeForce, utilizando a API OpenGL. Como sistema operacional, utiliza uma versão modificada do Windows Embedded Standard 7 japonês.
+
+Os jogos Namco ES3 são executados em uma caixa projetada pela Bandai Namco Games.</text>
+		</text>
+	</view>
+</theme>
