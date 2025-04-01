@@ -1,5 +1,17 @@
 ﻿# To avoid having a theme structure like <systemfolder>/theme.xml for custom collections
 # You can use the collections.info file to list every supported collections names
+3players
+4players
+arcade-classics
+arcade-killer
+beatemup
+fighting
+platform
+puzzle
+run-and-gun
+shumps-horizontal
+shumps-vertical
+sports
 col-fallout
 Ace Attorney
 Adventure Time
