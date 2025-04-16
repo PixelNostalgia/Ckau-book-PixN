@@ -7,7 +7,7 @@
    viewBox="0 0 1015.7354 94.720833"
    version="1.1"
    id="svg1"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    sodipodi:docname="mark3.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -20,24 +20,24 @@
      borderopacity="0.25"
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
+     inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.2911843"
-     inkscape:cx="1444.1026"
-     inkscape:cy="194.03518"
-     inkscape:window-width="2560"
-     inkscape:window-height="1351"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:zoom="0.41179679"
+     inkscape:cx="1712.0095"
+     inkscape:cy="210.05506"
+     inkscape:window-width="3840"
+     inkscape:window-height="2066"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg1" />
+     inkscape:current-layer="g19" />
   <defs
      id="defs1" />
   <g
      id="g19"
      inkscape:label="Japan"
-     style="display:inline"
+     style="display:none"
      transform="scale(0.26458333)">
     <path
        class="st0"
@@ -47,19 +47,19 @@
        style="fill:#0898ff" />
     <polygon
        class="st0"
-       points="1605.8,69.7 1746.8,69.7 1751.7,51.3 1610.8,51.3 "
+       points="1610.8,51.3 1605.8,69.7 1746.8,69.7 1751.7,51.3 "
        id="polygon14"
        inkscape:label="11"
        style="fill:#0898ff" />
     <polygon
        class="st0"
-       points="1585.4,25.4 1603.1,25.4 1607.8,8 1590,8 "
+       points="1590,8 1585.4,25.4 1603.1,25.4 1607.8,8 "
        id="polygon11"
        inkscape:label="10.3"
        style="fill:#0898ff" />
     <polygon
        class="st0"
-       points="1565.6,8 1560.9,25.4 1578.5,25.4 1583.2,8 "
+       points="1583.2,8 1565.6,8 1560.9,25.4 1578.5,25.4 "
        id="polygon10"
        inkscape:label="10.2"
        style="fill:#0898ff" />
@@ -99,7 +99,7 @@
        style="fill:#0898ff" />
     <polygon
        class="st0"
-       points="1020.8,8 1016,26.3 1117.2,26.3 1122.1,8 "
+       points="1122.1,8 1020.8,8 1016,26.3 1117.2,26.3 "
        id="polygon9"
        inkscape:label="7.1"
        style="fill:#0898ff" />
@@ -111,13 +111,13 @@
        style="fill:#0898ff" />
     <polygon
        class="st0"
-       points="811.1,64.5 816.1,46.2 674.8,46.2 669.8,64.5 "
+       points="669.8,64.5 811.1,64.5 816.1,46.2 674.8,46.2 "
        id="polygon6"
        inkscape:label="5"
        style="fill:#0898ff" />
     <polygon
        class="st0"
-       points="640.1,96.6 645.1,78.1 622.4,78.1 637.3,22.7 629.6,22.7 618.2,22.7 561.3,22.7 556.4,41 613.2,41 603.3,78.1 529.4,78.1 524.4,96.6 598.3,96.6 617.5,96.6 "
+       points="603.3,78.1 529.4,78.1 524.4,96.6 598.3,96.6 617.5,96.6 640.1,96.6 645.1,78.1 622.4,78.1 637.3,22.7 629.6,22.7 618.2,22.7 561.3,22.7 556.4,41 613.2,41 "
        id="polygon16"
        inkscape:label="4"
        style="fill:#0898ff" />
@@ -135,7 +135,7 @@
        style="fill:#0898ff" />
     <polygon
        class="st0"
-       points="258,3.2 235,23.7 267.8,47 290.9,26.5 "
+       points="290.9,26.5 258,3.2 235,23.7 267.8,47 "
        id="polygon1"
        inkscape:label="2.2"
        style="fill:#0898ff" />
@@ -147,7 +147,7 @@
        style="fill:#0898ff" />
     <polygon
        class="st0"
-       points="87.4,13.7 82.5,31.9 175.5,31.9 161.5,84 66.5,84 61.6,102.3 156.6,102.3 154.4,110.2 173.6,110.2 199.4,13.7 186.4,13.7 180.3,13.7 "
+       points="154.4,110.2 173.6,110.2 199.4,13.7 186.4,13.7 180.3,13.7 87.4,13.7 82.5,31.9 175.5,31.9 161.5,84 66.5,84 61.6,102.3 156.6,102.3 "
        id="polygon5"
        inkscape:label="1"
        style="fill:#0898ff" />

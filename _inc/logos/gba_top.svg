@@ -22,31 +22,26 @@
        x2="284.45001"
        y2="-475.99399"
        gradientTransform="matrix(1.6755636,0,0,-1.6755636,-19.5137,-926.42326)">
-        <stop
-   offset="0"
-   style="stop-color:#f1f3f2"
-   id="stop1" />
-
-        <stop
-   offset=".194"
-   style="stop-color:#a4b5d3"
-   id="stop2" />
-
-        <stop
-   offset=".586"
-   style="stop-color:#f1f3f2"
-   id="stop3" />
-
-        <stop
-   offset=".6"
-   style="stop-color:#5878b5"
-   id="stop4" />
-
-        <stop
-   offset="1"
-   style="stop-color:#f1f3f2"
-   id="stop5" />
-
+      <stop
+         offset="0"
+         style="stop-color:#f1f3f2"
+         id="stop1" />
+      <stop
+         offset=".194"
+         style="stop-color:#a4b5d3"
+         id="stop2" />
+      <stop
+         offset=".586"
+         style="stop-color:#f1f3f2"
+         id="stop3" />
+      <stop
+         offset=".6"
+         style="stop-color:#5878b5"
+         id="stop4" />
+      <stop
+         offset="1"
+         style="stop-color:#f1f3f2"
+         id="stop5" />
     </linearGradient>
     <linearGradient
        id="b"
@@ -56,21 +51,18 @@
        x2="1.7640001"
        y2="259.414"
        gradientTransform="matrix(4.2095184,0,0,-20.85641,452.89805,5194.2514)">
-        <stop
-   offset="0"
-   style="stop-color:#f1f3f2"
-   id="stop6" />
-
-        <stop
-   offset=".898"
-   style="stop-color:#a4b5d3"
-   id="stop7" />
-
-        <stop
-   offset="1"
-   style="stop-color:#5878b5"
-   id="stop8" />
-
+      <stop
+         offset="0"
+         style="stop-color:#f1f3f2"
+         id="stop6" />
+      <stop
+         offset=".898"
+         style="stop-color:#a4b5d3"
+         id="stop7" />
+      <stop
+         offset="1"
+         style="stop-color:#5878b5"
+         id="stop8" />
     </linearGradient>
     <linearGradient
        id="c"
@@ -80,31 +72,26 @@
        x2="284.853"
        y2="-480.57599"
        gradientTransform="matrix(1.6755636,0,0,-1.6755636,-21.189264,-928.09882)">
-        <stop
-   offset="0"
-   style="stop-color:#f1f3f2"
-   id="stop11" />
-
-        <stop
-   offset=".194"
-   style="stop-color:#a4b5d3"
-   id="stop12" />
-
-        <stop
-   offset=".586"
-   style="stop-color:#f1f3f2"
-   id="stop13" />
-
-        <stop
-   offset=".6"
-   style="stop-color:#5878b5"
-   id="stop14" />
-
-        <stop
-   offset="1"
-   style="stop-color:#f1f3f2"
-   id="stop15" />
-
+      <stop
+         offset="0"
+         style="stop-color:#f1f3f2"
+         id="stop11" />
+      <stop
+         offset=".194"
+         style="stop-color:#a4b5d3"
+         id="stop12" />
+      <stop
+         offset=".586"
+         style="stop-color:#f1f3f2"
+         id="stop13" />
+      <stop
+         offset=".6"
+         style="stop-color:#5878b5"
+         id="stop14" />
+      <stop
+         offset="1"
+         style="stop-color:#f1f3f2"
+         id="stop15" />
     </linearGradient>
     <filter
        style="color-interpolation-filters:sRGB"
@@ -480,5 +467,6 @@
      d="m 283.59041,54.144244 12.59989,24.668519 25.81584,3.431208 -19.56758,19.606199 4.71426,25.61262 -24.69332,-12.55122 -22.90226,12.39826 4.30627,-27.363282 -18.86864,-17.950071 27.35474,-4.360217 z"
      inkscape:transform-center-x="0.060100219"
      inkscape:transform-center-y="-4.6726945"
-     transform="matrix(1.0703398,0,0,1.0703398,171.3622,25.961363)" />
+     transform="matrix(1.0703398,0,0,1.0703398,165.3622,25.961363)"
+     inkscape:label="Star" />
 </svg>

@@ -11,7 +11,7 @@
    viewBox="0 0 502.921 104.794"
    xml:space="preserve"
    sodipodi:docname="ps4-w.svg"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -42,15 +42,15 @@
    inkscape:pageopacity="0.0"
    inkscape:pagecheckerboard="true"
    inkscape:deskcolor="#d1d1d1"
-   inkscape:zoom="2.5968815"
-   inkscape:cx="228.15827"
-   inkscape:cy="92.226001"
-   inkscape:window-width="2560"
-   inkscape:window-height="1351"
-   inkscape:window-x="-9"
-   inkscape:window-y="-9"
+   inkscape:zoom="3.6725451"
+   inkscape:cx="247.10384"
+   inkscape:cy="73.654644"
+   inkscape:window-width="3840"
+   inkscape:window-height="2066"
+   inkscape:window-x="-11"
+   inkscape:window-y="-11"
    inkscape:window-maximized="1"
-   inkscape:current-layer="Layer_1" />
+   inkscape:current-layer="g7" />
 
 <g
    id="g7"
@@ -80,7 +80,21 @@
    points="501.119,81.218 499.085,87.409 496.984,81.218 495.632,81.218 495.632,88.467 496.613,88.467 496.613,82.577 498.566,88.467 499.537,88.467 501.49,82.577 501.49,88.467 502.3,88.467 502.3,81.218 "
    id="polygon2"
    style="display:inline;fill:#ffffff"
-   inkscape:label="M" />
+   inkscape:label="M" /><path
+   fill="none"
+   d="M 502.3,24.062 H 180.797 v 64.45 0.633 H 502.921 V 24.062 Z m -13.197,57.156 h 5.627 v 0.831 h -2.322 v 6.418 h -0.98 v -6.418 h -2.324 v -0.831 z"
+   id="path1"
+   inkscape:label="path1"
+   style="display:none;fill:#ffffff" /><path
+   fill="none"
+   d="M 502.3,24.062 H 180.797 v 64.45 0.633 H 502.921 V 24.062 Z m -6.668,57.156 h 1.352 l 2.102,6.191 2.033,-6.191 h 1.182 v 7.249 h -0.811 v -5.89 l -1.953,5.89 h -0.971 l -1.953,-5.89 v 5.89 h -0.98 v -7.249 z"
+   id="path2"
+   style="display:none;fill:#ffffff" /><path
+   fill="none"
+   d="m 393.714,74.649 h 60.465 c 0.221,0 0.451,-0.227 0.451,-0.453 V 36.974 c 0,-0.83 -0.752,-0.906 -1.131,-0.604 l -60.156,37.223 c -0.381,0.227 -0.531,0.453 -0.451,0.755 0.07,0.151 0.301,0.301 0.822,0.301 z"
+   id="path5"
+   style="display:none;fill:#ffffff"
+   inkscape:label="path3" />
 	</g><g
    id="g11"
    inkscape:label="PS_logo"
