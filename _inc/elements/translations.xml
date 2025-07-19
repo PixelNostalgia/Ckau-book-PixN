@@ -7,7 +7,8 @@
 		<On_Logo>On (Black Bars)</On_Logo>
 		<On_Logo3>On</On_Logo3>
 		<VideoFullName>Fullscreen Video</VideoFullName>
-		<arcadebuttons>Arcade</arcadebuttons>
+		<buttons6>6 Buttons</buttons6>
+		<buttons8>8 Buttons</buttons8>
 		<arrows>Up/Down navigation arrows</arrows>
 		<contentBackground>Content Background</contentBackground>
 		<contentViewName>Content</contentViewName>
@@ -27,6 +28,8 @@
 		<ps5buttons>PlayStation (DualSense)</ps5buttons>
 		<stbuttons>Standard</stbuttons>
 		<subset.blurfx>Blur FX (enable blur)</subset.blurfx>
+		<subset.lowblur>Weak</subset.lowblur>
+		<subset.multipassblur>Strong</subset.multipassblur>
 		<subset.colorset>Menu Item Color</subset.colorset>
 		<subset.gamelistbgcolor>Gamelist background color</subset.gamelistbgcolor>
 		<subset.showgamescount>Show games count</subset.showgamescount>
@@ -39,6 +42,8 @@
 		<yes>Yes</yes>
 		<theme.hotkey>Show HotKey-buttons on launch</theme.hotkey>
 		<Test>Test</Test>
+		<systemview.textlist>Colorful (Text list)</systemview.textlist>
+		
 		</variables>
 
 	<variables lang="ru">
@@ -70,7 +75,8 @@
 		<WallViewName>Обои</WallViewName>
 		<WallpapersCarouselName>Обои + Карусель</WallpapersCarouselName>
 		<WallpapersHeroesName>Шапка (фанарт) + Карусель</WallpapersHeroesName>
-		<arcadebuttons>Аркадные</arcadebuttons>
+		<buttons6>6 Кнопок</buttons6>
+		<buttons8>8 Кнопок</buttons8>
 		<arrows>Стреки навигации Вверх/Вниз</arrows>
 		<blue>Синий</blue>
 		<carouselDetailsMarqueeViewName>Карусель + Подробно + Лого</carouselDetailsMarqueeViewName>
@@ -113,6 +119,8 @@
 		<ssimple>Одиночный (с анимацией)</ssimple>
 		<stbuttons>По умолчанию</stbuttons>
 		<subset.blurfx>Blur FX (включить размытие)</subset.blurfx>
+		<subset.lowblur>Слабое</subset.lowblur>
+		<subset.multipassblur>Сильное</subset.multipassblur>
 		<subset.colorset>Цвет элементов меню</subset.colorset>
 		<subset.gamelistbgcolor>Цвет фона списка игр</subset.gamelistbgcolor>
 		<subset.showgamescount>Показать количество игр</subset.showgamescount>
@@ -136,6 +144,7 @@
 		<yes>Да</yes>
 		<theme.hotkey>Показать HotKey-кнопки при запуске</theme.hotkey>
 		<Test>Тест</Test>
+		<systemview.textlist>Colorful (Текстовый список)</systemview.textlist>
 	</variables>
 	
 	<variables lang="it">
@@ -166,7 +175,8 @@
 		<WallViewName>Wallpaper</WallViewName>
 		<WallpapersCarouselName>Wallpaper + Carosello</WallpapersCarouselName>
 		<WallpapersHeroesName>Wallpaper (fanart) + Carosello</WallpapersHeroesName>
-		<arcadebuttons>Arcade</arcadebuttons>
+		<buttons6>6 Pulsanti</buttons6>
+		<buttons8>8 Pulsanti</buttons8>
 		<arrows>Frecce di navigazione su/giù</arrows>
 		<blue>Blu</blue>
 		<carouselDetailsMarqueeViewName>Carosello + Dettagli + Logo</carouselDetailsMarqueeViewName>
@@ -209,6 +219,8 @@
 		<ssimple>Semplice (con animazione)</ssimple>
 		<stbuttons>Standard</stbuttons>
 		<subset.blurfx>Blur FX (abilita sfocatura)</subset.blurfx>
+		<subset.lowblur>Debole</subset.lowblur>  
+		<subset.multipassblur>Forte</subset.multipassblur>  
 		<subset.colorset>Colore voce menu</subset.colorset>
 		<subset.gamelistbgcolor>Colore sfondo lista giochi</subset.gamelistbgcolor>
 		<subset.showgamescount>Mostra il n. di giochi</subset.showgamescount>
@@ -231,6 +243,7 @@
 		<yellow>Giallo</yellow>
 		<yes>SÌ</yes>
 		<theme.hotkey>Mostra HotKey-pulsanti all'avvio</theme.hotkey>
+		<systemview.textlist>Colorful (Elenco di testo)</systemview.textlist>
 	</variables>
 
 	<variables lang="pl">
@@ -262,7 +275,8 @@
 		<WallViewName>Tło</WallViewName>
 		<WallpapersCarouselName>Tło + Karuzela</WallpapersCarouselName>
 		<WallpapersHeroesName>Tło (fanart) + Karuzela</WallpapersHeroesName>
-		<arcadebuttons>Arcade</arcadebuttons>
+		<buttons6>6 Przycisków</buttons6>
+		<buttons8>8 Przycisków</buttons8>
 		<arrows>Strzałki nawigacyjne góra/dół</arrows>
 		<blue>Niebieski</blue>
 		<carouselDetailsMarqueeViewName>Karuzela + Szczegóły + Logo</carouselDetailsMarqueeViewName>
@@ -304,6 +318,8 @@
 		<ssimple>Proste (z animacją)</ssimple>
 		<stbuttons>Standard</stbuttons>
 		<subset.blurfx>Blur FX (włącz rozmycie)</subset.blurfx>
+		<subset.lowblur>Słabe</subset.lowblur>  
+		<subset.multipassblur>Silne</subset.multipassblur>
 		<subset.colorset>Kolor pozycji menu</subset.colorset>
 		<subset.gamelistbgcolor>Kolor tła listy gier</subset.gamelistbgcolor>
 		<subset.showgamescount>Pokaż liczbę gier</subset.showgamescount>
@@ -326,6 +342,7 @@
 		<yellow>Żółty</yellow>
 		<yes>Tak</yes>
 		<theme.hotkey>Pokaż HotKey-przyciski przy uruchomieniu</theme.hotkey>
+		<systemview.textlist>Colorful (Lista tekstowa)</systemview.textlist>
 	</variables>
 	
 	<variables lang="fr">
@@ -356,7 +373,8 @@
 		<WallViewName>Papier Peint</WallViewName>
 		<WallpapersCarouselName>Papier Peint + Carrousel</WallpapersCarouselName>
 		<WallpapersHeroesName>Papier Peint (fan art) + Carrousel</WallpapersHeroesName>
-		<arcadebuttons>Arcade</arcadebuttons>
+		<buttons6>6 Boutons</buttons6>
+		<buttons8>8 Boutons</buttons8>
 		<arrows>Flèches de navigation haut/bas</arrows>
 		<blue>Bleu</blue>
 		<carouselDetailsMarqueeViewName>Carrousel + Détails + Logo</carouselDetailsMarqueeViewName>
@@ -399,6 +417,8 @@
 		<ssimple>Simple (animée)</ssimple>
 		<stbuttons>Standard</stbuttons>
 		<subset.blurfx>Blur FX (activer le flou)</subset.blurfx>
+		<subset.lowblur>Faible</subset.lowblur>  
+		<subset.multipassblur>Fort</subset.multipassblur>  
 		<subset.colorset>Couleur de l'élément de menu</subset.colorset>
 		<subset.gamelistbgcolor>Gamelist background color</subset.gamelistbgcolor>
 		<subset.showgamescount>Couleur de fond de la liste de jeux</subset.showgamescount>
@@ -421,6 +441,7 @@
 		<yellow>Jaune</yellow>
 		<yes>Oui</yes>
 		<theme.hotkey>Afficher HotKey-boutons au lancement</theme.hotkey>
+		<systemview.textlist>Colorful (Liste de texte)</systemview.textlist>
 	</variables>
 	
 	<variables lang="de">
@@ -451,7 +472,8 @@
 		<WallViewName>Hintergrundbild</WallViewName>
 		<WallpapersCarouselName>Hintergrundbildkarussell</WallpapersCarouselName>
 		<WallpapersHeroesName>Hintergrundbild (Fanart) + Karussell</WallpapersHeroesName>
-		<arcadebuttons>Arcade</arcadebuttons>
+		<buttons6>6 Tasten</buttons6>
+		<buttons8>8 Tasten</buttons8>
 		<arrows>Pfeile zur Navigation auf/ab</arrows>
 		<blue>Blau</blue>
 		<carouselDetailsMarqueeViewName>Karussell + Details + Logo</carouselDetailsMarqueeViewName>
@@ -494,6 +516,8 @@
 		<ssimple>Einfach (mit Animation)</ssimple>
 		<stbuttons>Standard</stbuttons>
 		<subset.blurfx>Blur FX (Unschärfe aktivieren)</subset.blurfx>
+		<subset.lowblur>Schwach</subset.lowblur>  
+		<subset.multipassblur>Stark</subset.multipassblur>  
 		<subset.colorset>Farbe des Menüelements</subset.colorset>
 		<subset.gamelistbgcolor>Hintergrundfarbe der Spielliste</subset.gamelistbgcolor>
 		<subset.showgamescount>Spielanzahl anzeigen</subset.showgamescount>
@@ -516,6 +540,7 @@
 		<yellow>Gelb</yellow>
 		<yes>Ja</yes>
 		<theme.hotkey>HotKey-knöpfe beim Start anzeigen</theme.hotkey>
+		<systemview.textlist>Colorful (Textliste)</systemview.textlist>
 	</variables>
 	
 	<variables lang="es">
@@ -546,7 +571,8 @@
 		<WallViewName>Fondo de pantalla</WallViewName>
 		<WallpapersCarouselName>Carrusel de Fondos de pantalla</WallpapersCarouselName>
 		<WallpapersHeroesName>Fondos de pantalla (Fanart) + Carrusel</WallpapersHeroesName>
-		<arcadebuttons>Arcade</arcadebuttons>
+		<buttons6>6 Botones</buttons6>
+		<buttons8>8 Botones</buttons8>
 		<arrows>Flechas de navegación arriba/abajo</arrows>
 		<blue>Azul</blue>
 		<carouselDetailsMarqueeViewName>Carrusel + Detalles + Logo</carouselDetailsMarqueeViewName>
@@ -589,6 +615,8 @@
 		<ssimple>Sencillo (con animación)</ssimple>
 		<stbuttons>Estándar</stbuttons>
 		<subset.blurfx>Blur FX (habilitar desenfoque)</subset.blurfx>
+		<subset.lowblur>Débil</subset.lowblur>  
+		<subset.multipassblur>Fuerte</subset.multipassblur>  
 		<subset.colorset>Color del elemento del menú</subset.colorset>
 		<subset.gamelistbgcolor>Color de fondo de la lista de juegos</subset.gamelistbgcolor>
 		<subset.showgamescount>Mostrar el conteo de juegos</subset.showgamescount>
@@ -611,6 +639,7 @@
 		<yellow>Amarillo</yellow>
 		<yes>Sí</yes>
 		<theme.hotkey>Mostrar HotKey-botones al iniciar</theme.hotkey>
+		<systemview.textlist>Colorful (Lista de texto)</systemview.textlist>
 	</variables>
 	
 	<variables lang="pt">
@@ -641,7 +670,8 @@
 		<WallViewName>Papel de parede</WallViewName>
 		<WallpapersCarouselName>Carrossel de Papéis de parede</WallpapersCarouselName>
 		<WallpapersHeroesName>Papéis de parede (Fanart) + Carrossel</WallpapersHeroesName>
-		<arcadebuttons>Arcade</arcadebuttons>
+		<buttons6>6 Botões</buttons6>
+		<buttons8>8 Botões</buttons8>
 		<arrows>Setas de navegação para cima/baixo</arrows>
 		<blue>Azul</blue>
 		<carouselDetailsMarqueeViewName>Carrossel + Detalhes + Logotipo</carouselDetailsMarqueeViewName>
@@ -683,6 +713,8 @@
 		<ssimple>Simples (com animação)</ssimple>
 		<stbuttons>Padrão</stbuttons>
 		<subset.blurfx>Blur FX (habilitar desfoque)</subset.blurfx>
+		<subset.lowblur>Fraco</subset.lowblur>  
+		<subset.multipassblur>Forte</subset.multipassblur>  
 		<subset.colorset>Cor do elemento do menu</subset.colorset>
 		<subset.gamelistbgcolor>Cor de fundo da lista de jogos</subset.gamelistbgcolor>
 		<subset.showgamescount>Mostrar contagem de jogos</subset.showgamescount>
@@ -704,6 +736,7 @@
 		<yellow>Amarelo</yellow>
 		<yes>Sim</yes>
 		<theme.hotkey>Mostrar HotKey-botões ao iniciar</theme.hotkey>
+		<systemview.textlist>Colorful (Lista de texto)</systemview.textlist>
 	</variables>
 
 	<variables lang="ko">
@@ -734,7 +767,8 @@
 		<WallViewName>백그라운드 이미지</WallViewName>
 		<WallpapersCarouselName>백그라운드 이미지 캐러셀</WallpapersCarouselName>
 		<WallpapersHeroesName>백그라운드 이미지 (팬아트) + 캐러셀</WallpapersHeroesName>
-		<arcadebuttons>아케이드</arcadebuttons>
+		<buttons6>6 버튼</buttons6>
+		<buttons8>8 버튼</buttons8>
 		<arrows>위/아래 탐색 화살표</arrows>
 		<blue>파란색</blue>
 		<carouselDetailsMarqueeViewName>캐러셀 + 상세정보 + 로고</carouselDetailsMarqueeViewName>
@@ -777,6 +811,8 @@
 		<ssimple>단순함 (애니메이션 포함)</ssimple>
 		<stbuttons>기본</stbuttons>
 		<subset.blurfx>Blur FX (흐림 활성화)</subset.blurfx>
+		<subset.lowblur>약한</subset.lowblur>  
+		<subset.multipassblur>강한</subset.multipassblur>  
 		<subset.colorset>메뉴 항목 색상</subset.colorset>
 		<subset.gamelistbgcolor>게임목록 백그라운드 색상</subset.gamelistbgcolor>
 		<subset.showgamescount>게임 카운트 표시</subset.showgamescount>
@@ -799,5 +835,6 @@
 		<yellow>노란색</yellow>
 		<yes>예</yes>
 		<theme.hotkey>시작 시 HotKey-버튼 표시</theme.hotkey>
+		<systemview.textlist>Colorful (텍스트 목록)</systemview.textlist>
 	</variables>
 </theme>
