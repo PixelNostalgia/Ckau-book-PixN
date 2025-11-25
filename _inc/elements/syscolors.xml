@@ -488,6 +488,7 @@
 		<sysColor if="${system.theme} == 'zinc'">39ddf4</sysColor>
 		<sysColor if="${system.theme} == 'zx81'">39ddf4</sysColor>
 		<sysColor if="${system.theme} == 'zxspectrum'">8ea7ae</sysColor>
+		<sysColor if="${system.theme} == 'mamelite'">5a5fba</sysColor>
 		<sysColor if="${system.theme} == 'wingog'">39b1de</sysColor>
 		<sysColor if="${system.theme} == 'sonic3-air'">3770b2</sysColor>
 		<sysColor if="${system.theme} == 'sonic-mania'">3770b2</sysColor>
