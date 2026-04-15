@@ -130,6 +130,7 @@
 		<sysColor if="${system.theme} == 'dxx-rebirth'">603a69</sysColor>
 		<sysColor if="${system.theme} == 'digiblst'">eea147</sysColor>
 		<sysColor if="${system.theme} == 'dinothawr'">4e7fd7</sysColor>
+		<sysColor if="${system.theme} == 'doom3'">b93141</sysColor>
 		<sysColor if="${system.theme} == 'dos'">3362be</sysColor>
 		<sysColor if="${system.theme} == 'dragon32'">309496</sysColor>
 		<sysColor if="${system.theme} == 'dreamcast'">4e7fd7</sysColor>
