@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+<formatVersion>7</formatVersion>
+<!-- Карусель + подробно + лого -->
+	<customView name="Carousel + Details + Marquee" inherits="Carousel + Details" displayName="${carouselDetailsMarqueeViewName}">
+		<image name="md_marquee">
+			<pos>0.815 0.13</pos>
+			<pos if="${screen.ratio} == '4/3'">0.80 0.13</pos>
+			<maxSize>0.25 0.14</maxSize>
+			<visible>true</visible>
+			<zIndex>120</zIndex>
+		</image>
+		<text name="md_name" extra="true">
+			<pos>0.5 0.015</pos>
+			<size>1 0.03</size>
+			<verticalAlignment>center</verticalAlignment>
+			<horizontalAlignment>center</horizontalAlignment>
+			<color>FFFFFF1F</color>
+			<fontSize>0.024</fontSize>
+			<glowSize>0</glowSize>
+		</text>
+	</customView>
+</theme>

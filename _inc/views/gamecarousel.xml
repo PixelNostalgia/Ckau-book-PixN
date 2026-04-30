@@ -1,308 +1,580 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <theme>
 <formatVersion>7</formatVersion>
 <!-- Подробно + Карусель -->
-<view name="gamecarousel" displayName="${gameCarouselViewName}">
-<gamecarousel name="gamecarousel">
-<scrollSpeed>.05</scrollSpeed>
-<zIndex>10</zIndex>	   
-<origin>0 0</origin>   
-<maxLogoCount>10</maxLogoCount>
-<size>1 1</size>
-<type>vertical_wheel</type>
-<pos>0.34 0</pos>
-<logoSize>0.15 0.250</logoSize>
-<logoScale>1.3</logoScale> 
-<color>00000000</color>
-<logoRotationOrigin>4 0.5</logoRotationOrigin>
-<logoRotation>-10.5</logoRotation>
-<logoAlignment>center</logoAlignment>       
-<imageSource>marquee</imageSource>
-</gamecarousel>
+	<view name="gamecarousel" displayName="${gameCarouselViewName}">
+		<image name="art">
+			<visible>true</visible>
+		</image>
+		<image name="fanart">
+			<color>FFFFFF</color>
+			<opacity>0.1</opacity>
+		</image>
+		<image name="fanart_fix">
+			<!-- <visible>true</visible> -->
+			<opacity>0.8</opacity>
+		</image>
+		<text name="md_name">
+			<color>80808060</color>
+		</text>
+		<video name="md_video">
+			<pos>0.520 0.678</pos>
+			<maxSize>0.35</maxSize>
+			<origin>0.5 1</origin>
+			<delay>1</delay>
+			<showSnapshotNoVideo>false</showSnapshotNoVideo>
+			<showSnapshotDelay>true</showSnapshotDelay>
+			<snapshotSource>image</snapshotSource>
+			<effect>none</effect>
+			<loops>0</loops>
+			<zIndex>110</zIndex>
+			<storyboard event="activateNext">
+				<animation property="opacity" from="0" to="1" begin="0" duration="300" mode="linear"/>
+			</storyboard>
+			<storyboard event="activatePrev">
+				<animation property="opacity" from="0" to="1" begin="0" duration="300" mode="linear"/>
+			</storyboard>
+			<shader>
+				<path>:/shaders/border.glsl</path>
+				<cornerRadius>0.01</cornerRadius>
+				<innerShadowSize>0.01</innerShadowSize>
+				<innerShadowColor>00000030</innerShadowColor>
+				<outerShadowSize>0.020</outerShadowSize>
+				<outerShadowColor>00000050</outerShadowColor>
+			</shader>
+		</video>
 
-<image name="logo" extra="true">
-<pos>0.610 0.075</pos>
-<origin>0.5 0.5</origin>
-<maxSize>0.20 .10</maxSize>
-<zIndex>22</zIndex>
-<path>./_inc/logos/${system.theme}.svg</path>
-<path>./_inc/logos/${system.theme}.png</path>
-<animation mode="linear" duration="4000" begin="1000" property="scale" repeat="forever" autoreverse="true" from="1.00" to="1.02"/>
-</image>
+		<image name="thumbnail-art" extra="true">
+			<path>{game:thumbnail}</path>
+			<origin>0.5 1</origin>
+			<pos>0.18 0.677</pos>
+			<maxSize>0.307 0.585</maxSize>
+			<linearSmooth>true</linearSmooth>
+			<zIndex>110</zIndex>
+			<storyboard event="activateNext">
+				<animation property="opacity" from="0" to="1" begin="0" duration="300" mode="linear"/>
+			</storyboard>
+			<storyboard event="activatePrev">
+				<animation property="opacity" from="0" to="1" begin="0" duration="300" mode="linear"/>
+			</storyboard>
+			<shader>
+				<path>:/shaders/border.glsl</path>
+				<cornerRadius>0.01</cornerRadius>
+				<innerShadowSize>0.01</innerShadowSize>
+				<innerShadowColor>00000030</innerShadowColor>
+				<outerShadowSize>0.020</outerShadowSize>
+				<outerShadowColor>00000050</outerShadowColor>
+			</shader>
+		</image>
 
-<!----------------------------------------------------------->
-<!------------------------ HELPSYSTEM ----------------------->
-<!----------------------------------------------------------->
+		<text name="md_description">
+			<fontPath>${fontNameReg}</fontPath>
+			<pos>0.03 0.705</pos>
+			<size>0.66 0.224</size>
+			<fontSize>0.024</fontSize>
+			<fontSize if="${screen.ratio} == '4/3'">0.03</fontSize>
+			<color>AAAAAA</color>
+			<lineSpacing>1.1</lineSpacing>
+			<zIndex>105</zIndex>
+		</text>
+		<gamecarousel name="gamecarousel">
+			<type>vertical_wheel</type>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<origin>0 0</origin>
+			<logoScale>1.3</logoScale>
+			<logoSize>0.18 0.18</logoSize>
+			<logoRotation>-6.5</logoRotation>
+			<logoRotationOrigin>4.0 0.3</logoRotationOrigin>
+			<logoAlignment>right</logoAlignment>
+			<maxLogoCount>8</maxLogoCount>
+			<imageSource>marquee</imageSource> <!-- text, image, thumbnail, marquee -->
+			<zIndex>175</zIndex>
+			<logoScale if="${screen.ratio} == '4/3'">1.4</logoScale>
+			<logoRotationOrigin if="${screen.ratio} == '4/3'">5.0 0.3</logoRotationOrigin>
+		</gamecarousel>
+		<image name="gamecarouselLogo">
+			<linearSmooth>true</linearSmooth>
+			<!-- <shader>:/shaders/shadow.glsl</shader> -->
+		</image>
+		<text name="gamecarouselLogoText">
+			<color>FFFFFFFF</color>
+			<glowColor>000000FF</glowColor>
+			<glowSize>3</glowSize>
+			<lineSpacing>1.0</lineSpacing>
+			<fontSize>0.03</fontSize>
+		</text>
+		<control name="gamecarouselLogo,gamecarouselLogoText">
+			<storyboard event="activate">
+				<animation property="opacity" to="1" duration="150" mode="EaseOut"/>
+			</storyboard>
+			<storyboard event="scroll">
+				<animation property="opacity" to="0.5" duration="1" mode="EaseOut"/>
+				<animation property="opacity" to="0" begin="1400" duration="600" mode="EaseOut"/>
+			</storyboard>
+			<storyboard event="deactivate">
+				<animation property="opacity" to="0.5" duration="150" mode="EaseOut"/>
+				<animation property="opacity" to="0" begin="1400" duration="600" mode="EaseOut"/>
+			</storyboard>
+		</control>
 
-<helpsystem name="help">
-<pos>0 0.97</pos>    
-</helpsystem>
+		<image name="logo" extra="true">
+			<pos>0.862 0.152</pos>
+			<maxSize>0.200 0.126</maxSize>
+			<opacity>0</opacity>
+			<zIndex>0</zIndex>
+			<storyboard event="activate">
+				<animation property="zIndex" to="150" begin="1000" duration="" mode="Linear"/>
+				<animation property="opacity" to="0" duration="0" mode="EaseOut"/>
+				<animation property="opacity" to="1" begin="2000" duration="600" mode="EaseIn"/>
+			</storyboard>
+			<storyboard event="scroll">
+				<animation property="opacity" to="0" duration="150" mode="EaseOut"/>
+			</storyboard>
+			<storyboard event="deactivate">
+				<animation property="opacity" to="0" duration="150" mode="EaseOut"/>
+			</storyboard>
+		</image>
+		<!-- Logo anim bzz -->
+		<image name="logo1">
+			<pos>0.862 0.152</pos> <!-- Должно совпадать с logo -->
+			<maxSize>0.200 0.126</maxSize> <!-- Должно совпадать с logo -->
+			<storyboard event="activate">
+				<animation property="zIndex" to="20" begin="2600" duration="" mode="Linear"/>
+				<animation property="opacity" from="0.75" to="0" begin="2600" duration="4000" mode="EaseOut"/>
+				<animation property="scale" from="1.05" to="1.4" begin="2600" duration="4000" mode="EaseOut"/>
+				<animation property="color" from="FFAAAA" to="FF7777" begin="2600" duration="4000" mode="EaseOut"/>
+			</storyboard>
+		</image>
+		<image name="md_cartridge">
+			<tile>false</tile>
+			<origin>0.5 0.5</origin>
+			<pos>0.865 0.78</pos>
+			<maxSize>0.215 0.30</maxSize>
+			<maxSize if="${screen.ratio} == '4/3'">0.245 0.30</maxSize>
+			<zIndex>0</zIndex>
+			<storyboard event="activate">
+				<animation property="zIndex" to="150" begin="1000" duration="" mode="Linear"/>
+				<animation property="opacity" to="0" duration="0" mode="EaseOut"/>
+				<animation property="opacity" to="1" begin="2000" duration="600" mode="EaseIn"/>
+			</storyboard>
+			<storyboard event="scroll">
+				<animation property="opacity" to="0" duration="150" mode="EaseOut"/>
+			</storyboard>
+			<storyboard event="deactivate">
+				<animation property="opacity" to="0" duration="150" mode="EaseOut"/>
+			</storyboard>
+		</image>
+	<!-- Need test CD rotation animation -->
+		<!-- <control name="md_cartridge" if="{system.theme} == 'dreamcast' || {system.theme} == 'ps2' || {system.theme} == '3do' || {system.theme} == 'gc' || {system.theme} == 'wii'  || {system.theme} == 'ps3' || {system.theme} == 'amigacd32' || {system.theme} == 'cdi' || {system.theme} == 'neogeocd' || {system.theme} == 'pce-cd' || {system.theme} == 'pcfx' || {system.theme} == 'psx' || {system.theme} == 'saturn' || {system.theme} == 'segacd' || {system.theme} == 'xbox360'">
+			<storyboard event="open">
+				<animation property="zIndex" to="150" begin="1000" duration="" mode="Linear"/>
+				<animation property="opacity" to="0" duration="0" mode="EaseOut"/>
+				<animation property="opacity" to="1" begin="2000" duration="600" mode="EaseIn"/>
+				<animation property="rotation" from="-360" begin="4000" duration="6800" repeat="forever" mode="easeOutInQuint"/> 
+			</storyboard>
+			<storyboard event="activate">
+				<animation property="zIndex" to="150" begin="1000" duration="" mode="Linear"/>
+				<animation property="opacity" to="0" duration="0" mode="EaseOut"/>
+				<animation property="opacity" to="1" begin="2000" duration="600" mode="EaseIn"/>
+				<animation property="rotation" from="-360" begin="4000" duration="6800" repeat="forever" mode="easeOutInQuint"/> 
+			</storyboard>
+			<storyboard event="scroll">
+				<animation property="opacity" to="0" duration="150" mode="EaseOut"/>
+			</storyboard>
+			<storyboard event="deactivate">
+				<animation property="opacity" to="0" duration="150" mode="EaseOut"/>
+			</storyboard>
+		</control> -->
 
-<!-------------------------------------------------------->
-<!---------------------- SYSTEM ART ---------------------->
-<!-------------------------------------------------------->
+		<!-- Панель с иконками игроков, ачивок, руля и т.д.-->
+		<stackpanel name="container-icons">
+			<separator>0.01</separator>
+			<pos>0.386 0.092</pos>
+			<size>0.33 0.032</size>
+			<pos if="${screen.ratio} == '4/3'">0.356 0.072</pos>
+			<size if="${screen.ratio} == '4/3'">0.36 0.05</size>
+			<orientation>horizontal</orientation>
+			<zIndex>150</zIndex>
+			
+			<image name="icons-favorite">
+				<visible>{game:favorite}</visible>
+				<path>${themePath}/_inc/images/heart.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<padding>0 0</padding>
+				<maxSize>1 1</maxSize>
+			</image>
+			<text name="icons-players">
+				<fontPath>${fontPlayers}</fontPath>
+				<text>{game:playerCount}</text>
+				<alignment>center</alignment>
+				<fontSize>0.03</fontSize>
+				<fontSize if="${screen.ratio} == '4/3'">0.036</fontSize>
+				<color>666666</color>
+			</text>
+			<image name="icons-manual">
+				<visible>{game:hasManual}</visible>
+				<path>${themePath}/_inc/images/book.png</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<padding>0 0</padding>
+				<maxSize>1 1</maxSize>
+			</image>
+			
+			<image name="icons-cheevos">
+				<visible>{game:cheevos}</visible>
+				<path>${themePath}/_inc/icons/Contest.png</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<padding>0 0</padding>
+				<maxSize>1 1</maxSize>
+			</image>
+			<image name="icons-save">
+				<visible>{game:hasSaveState}</visible>
+				<path>${themePath}/_inc/icons/SaveState.png</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<padding>0 0</padding>
+				<maxSize>1 1</maxSize>
+			</image>
+			
+			<image name="icons-wheel">
+				<visible>{game:wheelGame}</visible>
+				<linearSmooth>true</linearSmooth>
+				<padding>0 0</padding>
+				<path>${themePath}/_inc/images/wheel.svg</path>
+				<maxSize>1 1</maxSize>
+				<color>666666</color>
+			</image>
+			
+			<image name="icons-gun">
+				<visible>{game:gunGame}</visible>
+				<linearSmooth>true</linearSmooth>
+				<padding>0 0</padding>
+				<path>${themePath}/_inc/images/gun.svg</path>
+				<maxSize>1 1</maxSize>
+				<color>666666</color>
+			</image>
+			
+			<image name="icons-padtokey">
+				<visible>{game:hasKeyboardMapping}</visible>
+				<linearSmooth>true</linearSmooth>
+				<padding>0 0</padding>
+				<path>${themePath}/_inc/images/padtokey.png</path>
+				<maxSize>1 1</maxSize>
+				<color>666666</color>
+			</image>
+			
+			<image name="icons-hidden">
+				<visible>{game:hidden}</visible>
+				<linearSmooth>true</linearSmooth>
+				<padding>0 0</padding>
+				<path>${themePath}/_inc/images/hidden.svg</path>
+				<maxSize>1 1</maxSize>
+				<color>666666</color>
+			</image>
+			<image name="icons-kid">
+				<visible>{game:kidGame}</visible>
+				<linearSmooth>true</linearSmooth>
+				<padding>0 0</padding>
+				<path>${themePath}/_inc/images/kid.svg</path>
+				<maxSize>1 1</maxSize>
+				<color>666666</color>
+			</image>
+		</stackpanel>
 
-<image name="pointer" extra="true">
-<pos>0.939 0.405</pos>
-<rotation>0</rotation>
-<maxSize>0.2 0.2</maxSize>
-<path>./_inc/wheel/pointers/default.png</path>
-<path>./_inc/wheel/pointers/${system.theme}.png</path>
-<storyboard repeat="forever">
-<animation property="x" from="0.97" to="0.94" duration="100" autoreverse="true" begin="2500" repeat="1"/>
-</storyboard>
-<zIndex>5</zIndex>
-</image>
+	<!-- Контейнер с иконками и текстом даты выхода и жанра -->
+	<container name="container-gamedata">
+		<pos>0.386 0.142</pos>
+		<size>0.33 0.032</size>
+		<pos if="${screen.ratio} == '4/3'">0.356 0.132</pos>
+		<size if="${screen.ratio} == '4/3'">0.36 0.042</size>
+		<zIndex>150</zIndex>
+		
+		<!-- Год выпуска -->
+		<container name="releaseyear-container">
+			<pos>0 0</pos> <!-- X=0, Y=0 -->
+			<visible>!empty({game:releaseyear})</visible>
+			<image>
+				<path>${themePath}/_inc/images/game_info_releasedate.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<padding>0 0</padding>
+				<maxSize>1 1</maxSize>
+			</image>
+			<text>
+				<pos>0.07 0</pos> <!-- Сдвигает текст правее иконки -->
+				<fontSize>0.022</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>{game:releaseyear}</text>
+				<size>0.4 1</size>
+				<color>666666</color>
+				<padding>4 0 4 0</padding>
+				<multiLine>false</multiLine>
+				<autoScrollDelay>3000</autoScrollDelay>
+				<singleLineScroll>true</singleLineScroll>
+				<!-- 4:3 -->
+				<pos if="${screen.ratio} == '4/3'">0.1 0</pos>
+				<fontSize if="${screen.ratio} == '4/3'">0.027</fontSize>
+			</text>
+		</container>
+		
+		<!-- Жанр -->
+		<container name="genre-container">
+			<pos>0.5 0</pos> <!-- Сдвигаем всю группу "жанр" правее -->
+			<visible>!empty({game:genre})</visible>
+			<image>
+				<path>${themePath}/_inc/images/game_info_genre.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<padding>0 0</padding>
+				<maxSize>1 1</maxSize>
+			</image>
+			<text>
+				<pos>0.07 0</pos>
+				<fontSize>0.022</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>{game:genre}</text>
+				<color>666666</color>
+				<size>0.42 1</size>
+				<padding>4 0 4 0</padding>
+				<multiLine>false</multiLine>
+				<autoScrollDelay>3000</autoScrollDelay>
+				<singleLineScroll>true</singleLineScroll>
+				<!-- 4:3 -->
+				<pos if="${screen.ratio} == '4/3'">0.1 0</pos>
+				<fontSize if="${screen.ratio} == '4/3'">0.027</fontSize>
+			</text>
+		</container>
+	</container>
 
-<image name="background1" extra="true">
-<pos>0 0</pos>
-<size>1 1</size>
-<zIndex>1</zIndex>
-<path>./_inc/backgrounds/refried/ur.m3u</path>
-</image>
+	<!-- Второй контейнер с иконками и текстом издателя, разработчика -->
+	<container name="container-gamedata2">
+		<pos>0.386 0.192</pos>
+		<size>0.33 0.032</size>
+		<pos if="${screen.ratio} == '4/3'">0.356 0.182</pos>
+		<size if="${screen.ratio} == '4/3'">0.36 0.042</size>
+		<zIndex>150</zIndex>
+		
+		<!-- Издатель (если не = разработчику) -->
+		<container name="publisher-container" visible="{game:publisher} != {game:developer} &amp;&amp; !empty({game:publisher})">
+		<pos>0 0</pos> <!-- X=0, Y=0 -->
+			<image>
+				<path>${themePath}/_inc/images/game_info_publisher.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<maxSize>1 1</maxSize>
+				</image>
+			<text>
+				<pos>0.07 0</pos> <!-- Сдвигает текст правее иконки -->
+				<fontSize>0.022</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>{game:publisher}</text>
+				<color>666666</color>
+				<size>0.4 1</size>
+				<padding>4 0 4 0</padding>
+				<multiLine>false</multiLine>
+				<autoScrollDelay>3000</autoScrollDelay>
+				<singleLineScroll>true</singleLineScroll>
+				<!-- 4:3 -->
+				<pos if="${screen.ratio} == '4/3'">0.1 0</pos>
+				<fontSize if="${screen.ratio} == '4/3'">0.027</fontSize>
+			</text>
+		</container>
+		
+		<!-- Разработчик (если не = издателю) -->
+		<container name="developer-container" visible="{game:publisher} != {game:developer} &amp;&amp; !empty({game:developer})">
+		<pos>0.5 0</pos> <!-- Сдвигает всю группу правее -->
+			<image>
+				<path>${themePath}/_inc/images/game_info_developer.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<maxSize>1 1</maxSize>
+			</image>
+			<text>
+				<pos>0.07 0</pos> <!-- Сдвигает текст правее иконки -->
+				<fontSize>0.022</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>{game:developer}</text>
+				<color>666666</color>
+				<size>0.42 1</size>
+				<padding>4 0 4 0</padding>
+				<multiLine>false</multiLine>
+				<autoScrollDelay>3000</autoScrollDelay>
+				<singleLineScroll>true</singleLineScroll>
+				<!-- 4:3 -->
+				<pos if="${screen.ratio} == '4/3'">0.1 0</pos>
+				<fontSize if="${screen.ratio} == '4/3'">0.027</fontSize>
+			</text>
+		</container>
+		
+		<!-- Если издатель == разработчик -->
+		<container name="dev-pub-container" visible="{game:publisher} == {game:developer} &amp;&amp; !empty({game:developer})">
+		<pos>0 0</pos> <!-- X=0, Y=0 -->
+			<image>
+				<path>${themePath}/_inc/images/game_info_publisher.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<maxSize>1 1</maxSize>
+			</image>
+			<image>
+				<pos>0.07 0</pos>
+				<pos if="${screen.ratio} == '4/3'">0.1 0</pos>
+				<path>${themePath}/_inc/images/game_info_developer.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<maxSize>1 1</maxSize>
+			</image>
+			<text>
+				<pos>0.14 0</pos> <!-- Сдвигает текст правее иконки -->
+				<fontSize>0.022</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>{game:developer}</text>
+				<color>666666</color>
+				<size>0.84 1</size>
+				<padding>4 0 4 0</padding>
+				<multiLine>false</multiLine>
+				<autoScrollDelay>3000</autoScrollDelay>
+				<singleLineScroll>true</singleLineScroll>
+				<!-- 4:3 -->
+				<pos if="${screen.ratio} == '4/3'">0.2 0</pos>
+				<fontSize if="${screen.ratio} == '4/3'">0.027</fontSize>
+			</text>
+		</container>
+	</container>
 
-<!--------------------------------------------------------->
-<!----------------------- ART EXTRAS ---------------------->
-<!--------------------------------------------------------->
+		<!-- Панель с иконками запуска, времени игры, посл. запуск -->
+		<stackpanel name="container-gamedata3">
+			<separator>0.01</separator>
+			<pos>0.386 0.242</pos>
+			<size>0.33 0.032</size>
+			<pos if="${screen.ratio} == '4/3'">0.356 0.232</pos>
+			<size if="${screen.ratio} == '4/3'">0.36 0.042</size>
+			<orientation>horizontal</orientation>
+			<zIndex>150</zIndex>
+			
+			<!-- Кол-во запусков -->
+			<image name="icons-playcount">
+				<path>${themePath}/_inc/images/game_info_playcount3.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<padding>0 0</padding>
+				<maxSize>1 1</maxSize>
+				<visible>{game:playcount} &gt; 0 ? 1 : 0</visible>
+			</image>
+			<text name="gamedata-playcount">
+				<fontSize>0.022</fontSize>
+				<fontSize if="${screen.ratio} == '4/3'">0.027</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>{game:playcount}</text>
+				<color>666666</color>
+				<padding>4 0 12 0</padding>
+				<visible>{game:playcount} &gt; 0 ? 1 : 0</visible>
+			</text>
+			
+			<!-- Время игры -->
+			<image name="icons-gametime">
+				<path>${themePath}/_inc/images/game_info_gametime.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<padding>0 0</padding>
+				<maxSize>1 1</maxSize>
+				<visible>{game:gametime} &gt; 0 ? 1 : 0</visible>
+			</image>
+			<text name="gamedata-gametime">
+				<fontSize>0.022</fontSize>
+				<fontSize if="${screen.ratio} == '4/3'">0.027</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>expandseconds({game:gametime})</text>
+				<color>666666</color>
+				<padding>4 0 12 0</padding>
+				<singleLineScroll>true</singleLineScroll>
+				<autoScrollDelay>3000</autoScrollDelay>
+				<visible>{game:gametime} &gt; 0 ? 1 : 0</visible>
+			</text>
+			
+			<!-- Последний запуск -->
+			<image name="icons-lastplayed">
+				<path>${themePath}/_inc/images/game_info_lastplayed.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<padding>0 0</padding>
+				<maxSize>1 1</maxSize>
+				<visible>{game:gametime} &gt; 0 ? 1 : 0</visible>
+				<!-- 4:3 -->
+				<visible if="${screen.ratio} == '4/3'">false</visible>
+			</image>
+			<text name="gamedata-lastplayed">
+				<fontSize>0.022</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>day({game:lastplayed}) + '.' + month({game:lastplayed}) + '.' + year({game:lastplayed})</text>
+				<color>666666</color>
+				<padding>4 0 12 0</padding>
+				<singleLineScroll>true</singleLineScroll>
+				<autoScrollDelay>3000</autoScrollDelay>
+				<visible>{game:gametime} &gt; 0 ? 1 : 0</visible>
+				<!-- 4:3 -->
+				<visible if="${screen.ratio} == '4/3'">false</visible>
+			</text>
+		</stackpanel>
 
-<image name="black_screen" extra="true">
-<pos>-0.025 0</pos>
-<size>1.08 1</size>
-<zIndex>16</zIndex>
-<path>./_inc/video frames/black_screen.png</path>
-</image>
-
-<image name="evideo_frame" extra="true">
-<pos>-0.035 -0.003</pos>
-<size>1.12 1.012</size>
-<zIndex>20</zIndex>
-<path>./_inc/video frames/default.png</path>
-<path>./_inc/video frames/${system.theme}.png</path>
-</image>
-
-<image name="console" aspect="true" extra="true">
-<path>./_inc/consoles/${system.theme}.png</path>
-<pos>0.13 0.80</pos>
-<origin>0.5 0.5</origin>
-<maxSize>0.20 .20</maxSize>
-<zIndex>30</zIndex>
-<storyboard>
-<animation property="opacity" from="0" to="0" begin="0" duration="1" mode="linear"/>
-<animation property="opacity" from="0" to="1" begin="0" duration="300" mode="linear"/>
-</storyboard>
-</image>
-
-<!----------------------------------------------------------->
-<!---------------------- GAMELIST ART ----------------------->
-<!----------------------------------------------------------->
-
-<image name="icon_background_small" extra="true">
-<pos>0.61 0.18</pos>
-<path>./_inc/gamelist/icon_background.png</path>
-<origin>0.5 0.5</origin>
-<maxSize>0.18 .10</maxSize>
-<zIndex>12</zIndex>
-<opacity>.75</opacity>
-<visible>true</visible>
-</image>
-
-<image name="thumbnail-gamecarousel" extra="true">
-<path>{game:thumbnail}</path>
-<visible>true</visible>
-<pos>0.61 0.50</pos>
-<origin>0.5 0.5</origin>
-<maxSize>0.22 .550</maxSize>
-<zIndex>12</zIndex>
-<storyboard>
-<animation property="opacity" from="0" to="0" begin="0" duration="1" mode="linear"/>
-<animation property="opacity" from="0" to="1" begin="0" duration="300" mode="linear"/>
-</storyboard>
-<storyboard event="activateNext">
-<animation property="opacity" from="0" to="0" begin="0" duration="1" mode="linear"/>
-<animation property="opacity" from="0" to="1" begin="0" duration="300" mode="linear"/>
-</storyboard>    
-<storyboard event="activatePrev">
-<animation property="opacity" from="0" to="0" begin="0" duration="1" mode="linear"/>
-<animation property="opacity" from="0" to="1" begin="0" duration="300" mode="linear"/>
-</storyboard>
-</image>
-
-<image name="md_cartridge">
-<pos>0.69 0.66</pos>
-<origin>0.4 0.4</origin>
-<maxSize>0.10 .15</maxSize>
-<zIndex>14</zIndex>
-</image>
-
-<video name="md_video">
-<pos>0.2810 0.53</pos>
-<origin>0.5 0.5</origin>
-<effect>none</effect>
-<maxSize>0.377 0.504</maxSize>
-<delay>0</delay>
-<showSnapshotNoVideo>true</showSnapshotNoVideo>
-<showSnapshotDelay>true</showSnapshotDelay>
-<snapshotSource>image</snapshotSource>
-<zIndex>18</zIndex>
-</video>
-
-<image name="md_marquee" extra="true">
-<pos>0.28 0.124</pos>
-<origin>0.5 0.5</origin>
-<maxSize>0.4 .2</maxSize>
-</image>
-
-<rating name="md_rating">
-<origin>0.5 0.5</origin>     
-<pos>0.63 0.81</pos> 
-<maxSize>0.100 0.030</maxSize>
-<filledPath>./_inc/_icons/star_filled.png</filledPath>
-<unfilledPath>./_inc/_icons/star_empty.png</unfilledPath>	
-<zIndex>15</zIndex>
-</rating>	 
-
-<!-- Regional Flag -->
-<image name="md_flag">
-<pos>0.53 0.165</pos>
-<origin>0 0</origin>
-<maxSize>0.03 0.03</maxSize>
-<zIndex>999</zIndex>
-</image>
-
-<!--  Favorite Icons -->	
-<image name="md_notfavorite" extra="true">
-<origin>0 0</origin>
-<pos>0.56 0.165</pos>
-<maxSize>0.03 0.03</maxSize>
-<color>80808090</color>
-<path>./_inc/_icons/favorite.png</path>
-<zIndex>999</zIndex>
-</image> 
-
-<image name="md_favorite">
-<origin>0 0</origin>
-<pos>0.56 0.165</pos>
-<maxSize>0.03 0.03</maxSize>
-<path>./_inc/_icons/favorite.png</path>
-<zIndex>999</zIndex>
-<color>dddddd</color>
-</image> 
-
-<!--  Save State Icons -->
-<image name="md_nosavestate" extra="true">
-<origin>0 0</origin>
-<pos>0.58 0.165</pos>
-
-<maxSize>0.03 0.03</maxSize>
-<path>./_inc/_icons/savestate.png</path>
-<color>80808090</color>
-<zIndex>150</zIndex>
-</image>
-
-<image name="md_savestate">
-<origin>0 0</origin>
-<pos>0.58 0.165</pos>
-
-<maxSize>0.03 0.03</maxSize>
-<path>./_inc/_icons/savestate.png</path>
-<color>dddddd</color>
-<zIndex>150</zIndex>
-</image>
-
-<!--  Achievement Icons -->		
-<image name="md_notcheevos" extra="true">
-<origin>0 0</origin>
-<pos>0.602 0.165</pos>
-<maxSize>0.03 0.03</maxSize>
-<path>./_inc/_icons/cheevos.png</path>
-<color>80808090</color>
-<zIndex>150</zIndex>
-<linearSmooth>true</linearSmooth>
-</image>
-
-<image name="md_cheevos">
-<origin>0 0</origin>
-<pos>0.602 0.165</pos>
-<maxSize>0.03 0.03</maxSize>
-<path>./_inc/_icons/cheevos.png</path>
-<color>dddddd</color>
-<zIndex>150</zIndex>
-<linearSmooth>true</linearSmooth>
-</image>
-
-<image name="md_nomanual" extra="true">
-<origin>0 0</origin>
-<pos>0.625 0.165</pos>
-<maxSize>0.03 0.03</maxSize>
-<path>./_inc/_icons/manual.png</path>
-<color>80808090</color>
-</image>
-
-<image name="md_manual">
-<origin>0 0</origin>
-<pos>0.625 0.165</pos>
-<maxSize>0.03 0.03</maxSize>
-<path>./_inc/_icons/manual.png</path>
-<color>dddddd</color>
-</image>
-
-<!--  Map Icons -->	
-<image name="md_nomap" extra="true">
-<origin>0 0</origin>
-<pos>0.650 0.165</pos>
-<maxSize>0.03 0.03</maxSize>
-<path>./_inc/_icons/map.png</path>
-<color>80808090</color>
-</image>
-
-<image name="md_map">
-<origin>0 0</origin>
-<pos>0.650 0.165</pos>
-<maxSize>0.03 0.03</maxSize>
-<path>./_inc/_icons/map.png</path>
-<color>dddddd</color>
-</image>
-
-<!--  Kid Game Icons -->
-<image name="md_notkidgame" extra="true"> 
-<origin>0 0</origin>
-<pos>0.675 0.165</pos>
-<maxSize>0.03 0.03</maxSize>
-<path>./_inc/_icons/kid.png</path>
-<color>80808090</color>
-<zIndex>100</zIndex>
-<linearSmooth>true</linearSmooth>
-</image>
-
-<image name="md_kidgame"> 
-<origin>0 0</origin>
-<pos>0.675 0.165</pos>
-<maxSize>0.03 0.03</maxSize>
-<path>./_inc/_icons/kid.png</path>
-<color>dddddd</color>
-<zIndex>100</zIndex>
-<linearSmooth>true</linearSmooth>
-</image>
-
-<text name="md_description">
-<pos>0.240 0.87</pos>
-<size>0.4 0.07</size>
-<fontSize>0.024</fontSize>
-<color>f5f5f5</color>
-<glowColor>00000066</glowColor>
-<glowSize>1</glowSize>
-<alignment>left</alignment>
-<lineSpacing>1</lineSpacing>
-<fontPath>./_inc/fonts/ubuntu_condensed.ttf</fontPath>
-</text>
-
-<image name="md_favorite, md_map, md_manual, md_savestate, md_cheevos, md_hidden, md_kidgame">
-<storyboard>  
-<animation property="opacity" from="0.6" to="1"  duration="350" mode="easeInOut" autoreverse="true" repeat="forever"/>   
-</storyboard>
-</image>
-</view>
-<!-- Navigation arrows, if enabled -->
-  	<include ifSubset="arrows:On">./../../_inc/views/arrows.xml</include>
+		<!-- Панель с флагами и рейтингом -->
+		<stackpanel name="container-flags">
+			<separator>0.01</separator>
+			<pos>0.386 0.292</pos>
+			<size>0.33 0.032</size>
+			<pos if="${screen.ratio} == '4/3'">0.356 0.282</pos>
+			<size if="${screen.ratio} == '4/3'">0.36 0.042</size>
+			<orientation>horizontal</orientation>
+			<zIndex>150</zIndex>
+			
+			<!-- Флаги / Flags -->
+			<image name="flag-region">
+				<path>${themePath}/_inc/images/flags/{game:region}.png</path>
+				<maxSize>0.8</maxSize>
+				<origin>0.5 0.5</origin>
+				<pos>0.5 0.4</pos>
+				<linearSmooth>true</linearSmooth>
+				<opacity>0.8</opacity>
+				<visible>{game:region} != {game:lang} &amp;&amp; !contains(lower({game:region}), ',') &amp;&amp; !empty({game:region})</visible>
+			</image>
+			<image name="flag-force-world">
+				<path>${themePath}/_inc/images/flags/wr.png</path>
+				<maxSize>0.8</maxSize>
+				<origin>0.5 0.5</origin>
+				<pos>0.5 0.4</pos>
+				<linearSmooth>true</linearSmooth>
+				<opacity>0.8</opacity>
+				<visible>contains(lower({game:region}), ',') &amp;&amp; !empty({game:region})</visible>
+			</image>
+			<image name="flag-lang">
+				<path>${themePath}/_inc/images/flags/{game:lang}.png</path>
+				<maxSize>0.8</maxSize>
+				<origin>0.5 0.5</origin>
+				<pos>0.5 0.4</pos>
+				<linearSmooth>true</linearSmooth>
+				<opacity>0.8</opacity>
+				<visible>!contains(lower({game:lang}), ',') &amp;&amp; !empty({game:lang})</visible>
+			</image>
+			<text name="gamedata-lang">
+				<fontSize>0.019</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>{game:lang}.upper()</text>
+				<color>FFFFFF</color>
+				<singleLineScroll>true</singleLineScroll>
+				<autoScrollDelay>0</autoScrollDelay>
+				<y>0.02</y>
+				<visible>contains(lower({game:lang}), ',') &amp;&amp; !empty({game:lang})</visible>
+			</text>
+			
+			<!-- Рейтинг -->
+			<text name="gamedata-stars">
+				<fontSize>0.028</fontSize>
+				<text>{game:stars}</text>
+				<color>666666</color>
+				<visible>!empty({game:stars})</visible>
+			</text>
+		</stackpanel>
+	</view>
 </theme>

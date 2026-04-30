@@ -1,56 +1,34 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <theme>
 <formatVersion>7</formatVersion>
 <!-- Сетка -->
 	<view name="grid">
-		<text name="logoText">
-			<pos>.5 0.1427777777777778</pos>
-			<origin>0.5 0</origin>
-			<size>0.15625 0.0555555555555556</size>
-			<fontSize>0.0444444444444444</fontSize>
-			<fontPath>./../../_inc/fonts/ubuntu_condensed.ttf</fontPath>
-			<color>${baseColor}</color>
-			<forceUppercase>true</forceUppercase>
+		<text name="md_description">
+			<visible>false</visible>
 		</text>
-		<text name="md_name" extra="true">
-			<pos>0.005 0.005</pos>
-			<alignment>left</alignment>
-			<fontPath>./../../_inc/fonts/ubuntu_condensed.ttf</fontPath>
-			<color>FFFFFF1F</color>
-			<fontSize>0.02</fontSize>
-			<lineSpacing>1.1</lineSpacing>
-			<zIndex>140</zIndex>
-		</text>
-		<image name="background" extra="true">
-			<tile>true</tile>
-			<origin>0.5 0.5</origin>
-			<pos>0.5 0.5</pos>
-			<size>1 1</size>
-			<path>./../../_inc/images/space.png</path>
-			<color>141414</color>
-		</image>
-		<image name="logo">
-			<path>./../../_inc/logos/${system.theme}.png</path>
-			<path>./../../_inc/logos/${system.theme}-${lang}.png</path>
-			<pos>.5 0.09</pos>
-			<maxSize>0.260 0.126</maxSize>
-			<origin>0.5 0.5</origin>
+		<image name="art">
+			<pos>0.5 0.6</pos>
 		</image>
 		<imagegrid name="gamegrid">
 			<pos>0.016 0.16</pos>
-			<size>0.950 0.79</size>
+			<size>0.95 0.79</size>
 			<margin>0.005 0.010</margin>
 			<padding>0.03 0.04 0.03 0.1</padding>
 			<autoLayout>7 2</autoLayout>
-			<autoLayout if="${screen.ratio} == '21/9'">9 2</autoLayout>
+			<autoLayout if="{system.theme} == 'snes' || {system.theme} == 'n64' || {system.theme} == 'gameandwatch' || {system.theme} == 'solarus' || {system.theme} == 'ngage'">5 3</autoLayout>
 			<autoLayoutSelectedZoom>1.12</autoLayoutSelectedZoom>
 			<centerSelection>false</centerSelection>
 			<animateSelection>false</animateSelection>
-			<scrollSound>./../../_inc/sound/scroll.wav</scrollSound>
-			<scrollbarColor>333333ff</scrollbarColor>
+			<scrollbarColor>333333FF</scrollbarColor>
 			<scrollbarCorner>0.49</scrollbarCorner>
 			<scrollbarSize>0.005</scrollbarSize>
+			<autoLayout if="${screen.ratio} == '4/3'">5 2</autoLayout>
+			<autoLayout if="${screen.ratio} == '21/9'">9 2</autoLayout>
+			<scrollbarAlignment if="${screen.ratio} == '4/3'">left</scrollbarAlignment>
+			
+			<autoLayout if="${screen.ratio} == '21/9' && {system.theme} == 'snes' || {system.theme} == 'n64' || {system.theme} == 'gameandwatch' || {system.theme} == 'solarus' || {system.theme} == 'ngage'">7 3</autoLayout>
+			<autoLayout if="${screen.ratio} == '4/3' && {system.theme} == 'snes' || {system.theme} == 'n64' || {system.theme} == 'gameandwatch' || {system.theme} == 'solarus' || {system.theme} == 'ngage'">4 3</autoLayout>
+			<zIndex>50</zIndex>
 		</imagegrid>
 		<gridtile name="default">
 			<backgroundColor>FFFFFF00</backgroundColor>
@@ -70,121 +48,188 @@
 			<fontSize>0.022</fontSize>
 			<alignment>center</alignment>
 			<size>1 0.24</size>
+			<!-- <multiLine>false</multiLine>
+			<autoScrollDelay>1</autoScrollDelay>
+			<singleLineScroll>true</singleLineScroll> -->
+			<visible>false</visible>
 		</text>
-		<text name="gridtile_selected">
+		<text name="gridtile:selected">
 			<color>FFFFFF</color>
 			<glowColor>${glowColor}</glowColor>
 			<glowSize>2</glowSize>
+			<visible>false</visible>
 		</text>
+		<!-- <text name="gridtile">
+			<color>D0D0D0</color>
+			<backgroundColor>00000000</backgroundColor>
+			<fontSize>0.022</fontSize>
+			<alignment>center</alignment>
+			<size>1 0.24</size>
+			<multiLine>false</multiLine>
+			<autoScrollDelay>1</autoScrollDelay>
+			<singleLineScroll>true</singleLineScroll>
+		</text>
+		<text name="gridtile:selected">
+			<color>FFFFFF</color>
+			<glowColor>${glowColor}</glowColor>
+			<glowSize>2</glowSize>
+		</text> -->
+		<image name="gridtile.image">
+			<linearSmooth>true</linearSmooth>
+		</image>
 		<image name="gridtile.favorite">
-			<path>./../../_inc/images/favorite.png</path>
-			<pos>0.95 0.05</pos>
-			<maxSize>0.10 0.10</maxSize>
+			<path>${themePath}/_inc/images/favorite.png</path>
+			<pos>0.9 0.1</pos>
+			<maxSize>0.18 0.18</maxSize>
 			<origin>0.5 0.5</origin>
-			<horizontalAlignment>right</horizontalAlignment>
+			<horizontalAlignment>center</horizontalAlignment>
+			<verticalAlignment>top</verticalAlignment>
 			<color>FFFF00B0</color>
 		</image>
 		<image name="gridtile.favorite:selected">
-			<color>ffffff</color>
+			<color>FFFFFF</color>
 		</image>
 		<ninepatch name="gridtile.background:selected">
-			<path>./../../_inc/images/framewselsq.png</path>
+			<path>${themePath}/_inc/images/framewselsq.png</path>
 			<cornerSize>36 36</cornerSize>
 			<padding>-18 -18</padding>
 			<color>${baseColor}</color>
 			<animateColor>141414</animateColor>
 			<animateColorTime>650</animateColorTime>
 		</ninepatch>
-		<datetime name="md_releasedate">
-			<origin>0.5 1</origin>
-			<pos>0.98 0.78</pos>
-			<size>0.1 0.0222222222222222</size>
-			<rotation>-90</rotation>
-			<alignment>left</alignment>
-			<format>%Y</format>
-			<fontPath>./../../_inc/fonts/ubuntu_condensed.ttf</fontPath>
-			<fontSize>0.0254444444444444</fontSize>
-			<color>666666</color>
-			<zIndex>180</zIndex>
-		</datetime>
-		<image name="md_flag">
-			<origin>0.5 0</origin>
-			<pos>0.98 0.88</pos>
-			<maxSize>0.02 0.05</maxSize>
-			<color>FFFFFF90</color>
-		</image>
-		<rating name="md_rating">
-			<pos>0.98 0.21</pos>
-			<size>0.05 0.03</size>
-			<rotation>-90</rotation> 
-			<color>666666</color>
-			<origin>0.5 0</origin>
-			<horizontalAlignment>right</horizontalAlignment>
-			<unfilledColor>80808030</unfilledColor>
-			<unfilledPath>./../../_inc/images/star_filled.svg</unfilledPath>
-		</rating>
-		<text name="md_players">
-			<pos>0.98 0.37</pos>
-			<size>0.03 0.03</size>
-			<origin>0.5 0.5</origin>
-			<fontPath>./../../_inc/fonts/players.ttf</fontPath>
-			<text>1</text>
-			<alignment>center</alignment>
-			<fontSize>0.034</fontSize>
-			<color>666666</color>
-		</text>
-		<image name="md_manual,md_nomanual">
-			<pos>0.98 0.42</pos>
-			<path>./../../_inc/images/book.png</path>
-			<maxSize>0.02 0.03</maxSize>
-			<origin>0.5 0.5</origin>
-			<color>666666</color>
+
+		<!-- Вертикальная панель с иконками -->
+		<stackpanel name="container-icons-vertical" extra="true">
+			<pos>0.973 0.19</pos>
+			<size>0.02 0.5</size>
+			<orientation>vertical</orientation>
 			<zIndex>150</zIndex>
-		</image>
-		<image name="md_nomanual">
-			<color>80808040</color>
-		</image>
-		<image name="md_cheevos,md_notcheevos">
-			<origin>0.5 0.5</origin>
-			<path>./../../_inc/icons/Contest.png</path>
-			<pos>0.98 0.47</pos>
-			<maxSize>0.02 0.03</maxSize>
-			<color>666666</color>
-			<zIndex>100</zIndex>
-		</image>
-		<image name="md_notcheevos">
-			<color>80808040</color>
-		</image>
-		<image name="md_savestate,md_nosavestate">
-			<origin>0.5 0.5</origin>
-			<path>./../../_inc/icons/SaveState.png</path>
-			<pos>0.98 0.52</pos>
-			<y ifCheevos="false">0.47</y>
-			<maxSize>0.02 0.03</maxSize>
-			<color>666666</color>
+			<separator>0.008</separator>
+			<pos if="${screen.ratio} == '4/3'">0.957 0.19</pos>
+			<size if="${screen.ratio} == '4/3'">0.038 0.5</size>
+			<separator if="${screen.ratio} == '4/3'">0.016</separator>
+			
+			<!-- Количество игроков -->
+			<text name="icons-players">
+				<fontPath>${fontPlayers}</fontPath>
+				<text>{game:playerCount}</text>
+				<alignment>center</alignment>
+				<fontSize>0.03</fontSize>
+				<fontSize if="${screen.ratio} == '4/3'">0.04</fontSize>
+				<color>666666</color>
+				<size>0.1 0.1</size>
+			</text>
+			
+			<!-- Все иконки -->
+			<image name="icons-manual">
+				<visible>{game:hasManual}</visible>
+				<path>${themePath}/_inc/images/book.png</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<maxSize>1 1</maxSize>
+			</image>
+			
+			<image name="icons-cheevos">
+				<visible>{game:cheevos}</visible>
+				<path>${themePath}/_inc/icons/Contest.png</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<maxSize>1 1</maxSize>
+			</image>
+			
+			<image name="icons-save">
+				<visible>{game:hasSaveState}</visible>
+				<path>${themePath}/_inc/icons/SaveState.png</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<maxSize>1 1</maxSize>
+			</image>
+			
+			<image name="icons-wheel">
+				<visible>{game:wheelGame}</visible>
+				<path>${themePath}/_inc/images/wheel.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<maxSize>1 1</maxSize>
+			</image>
+			
+			<image name="icons-gun">
+				<visible>{game:gunGame}</visible>
+				<path>${themePath}/_inc/images/gun.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<maxSize>1 1</maxSize>
+			</image>
+			
+			<image name="icons-padtokey">
+				<visible>{game:hasKeyboardMapping}</visible>
+				<path>${themePath}/_inc/images/padtokey.png</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<maxSize>1 1</maxSize>
+			</image>
+			
+			<image name="icons-hidden">
+				<visible>{game:hidden}</visible>
+				<path>${themePath}/_inc/images/hidden.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<maxSize>1 1</maxSize>
+			</image>
+			
+			<image name="icons-kid">
+				<visible>{game:kidGame}</visible>
+				<path>${themePath}/_inc/images/kid.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<maxSize>1 1</maxSize>
+			</image>
+		</stackpanel>
+
+		<stackpanel name="container-icons-vertical-invert" extra="true" reverse="true">
+			<pos>0.973 0.42</pos>
+			<size>0.02 0.5</size>
+			<orientation>vertical</orientation>
 			<zIndex>150</zIndex>
-		</image>
-		<image name="md_nosavestate">
-			<color>80808030</color>
-		</image>
-		<image name="md_hidden">
-			<pos>0.98 0.92</pos>
-			<path>./../../_inc/images/hidden.svg</path>
-			<maxSize>0.02 0.03</maxSize>
-			<origin>0.5 0.5</origin>
-			<color>666666</color>
-			<zIndex>150</zIndex>
-		</image>
-		<image name="md_kidgame,md_notkidgame">
-			<pos>0.98 0.57</pos>
-			<path>./../../_inc/images/kid.svg</path>
-			<maxSize>0.02 0.03</maxSize>
-			<origin>0.5 0.5</origin>
-			<color>666666</color>
-			<zIndex>150</zIndex>
-		</image>
-		<image name="md_notkidgame"> 
-			<color>80808000</color>
-		</image>
+			<separator>0.008</separator>
+			<pos if="${screen.ratio} == '4/3'">0.957 0.42</pos>
+			<size if="${screen.ratio} == '4/3'">0.038 0.5</size>
+			<separator if="${screen.ratio} == '4/3'">0.016</separator>
+			
+			<!-- Флаги / Flags -->
+			<image name="flag-region">
+				<path>${themePath}/_inc/images/flags/{game:region}.png</path>
+				<linearSmooth>true</linearSmooth>
+				<maxSize>1 1</maxSize>
+				<opacity>0.8</opacity>
+				<visible>{game:region} != {game:lang} &amp;&amp; !contains(lower({game:region}), ',') &amp;&amp; !empty({game:region})</visible>
+			</image>
+			<image name="flag-force-world">
+				<path>${themePath}/_inc/images/flags/wr.png</path>
+				<linearSmooth>true</linearSmooth>
+				<maxSize>1 1</maxSize>
+				<opacity>0.8</opacity>
+				<visible>contains(lower({game:region}), ',') &amp;&amp; !empty({game:region})</visible>
+			</image>
+			<image name="flag-lang">
+				<path>${themePath}/_inc/images/flags/{game:lang}.png</path>
+				<linearSmooth>true</linearSmooth>
+				<maxSize>1 1</maxSize>
+				<opacity>0.8</opacity>
+				<visible>!contains(lower({game:lang}), ',') &amp;&amp; !empty({game:lang})</visible>
+			</image>
+			<!-- <container name="releaseyear-container">
+			<visible>!empty({game:releaseyear})</visible>
+			<text>
+				<fontSize>0.022</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>{game:releaseyear}</text>
+				<size>1.2 1.8</size>
+				<color>666666</color>
+				<rotation>-90</rotation>
+				<pos>-0.1 0</pos>
+			</text>
+			</container> -->
+		</stackpanel>
 	</view>
 </theme>

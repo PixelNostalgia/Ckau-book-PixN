@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<formatVersion>7</formatVersion>
+<!-- Сетка + подробно -->
+	<customView name="Grid + Details" inherits="grid" displayName="${gridDetailsViewName}">
+		<imagegrid name="gamegrid">
+			<pos>0 0.16</pos>
+			<size>0.66 0.79</size>
+			<autoLayout>5 2</autoLayout>
+			<autoLayout if="${screen.ratio} == '4/3'">3 2</autoLayout>
+			<autoLayout if="${screen.ratio} == '21/9'">7 2</autoLayout>
+			<autoLayout if="{system.theme} == 'snes' || {system.theme} == 'n64' || {system.theme} == 'gameandwatch' || {system.theme} == 'solarus' || {system.theme} == 'ngage'">4 3</autoLayout>
+			<autoLayout if="${screen.ratio} == '4/3' && {system.theme} == 'snes' || {system.theme} == 'n64' || {system.theme} == 'gameandwatch' || {system.theme} == 'solarus' || {system.theme} == 'ngage'">3 3</autoLayout>
+		</imagegrid>
+		<image name="md_marquee">
+			<pos>0.815 0.13</pos>
+			<pos if="${screen.ratio} == '4/3'">0.80 0.13</pos>
+			<maxSize>0.25 0.14</maxSize>
+			<visible>true</visible>
+			<zIndex>120</zIndex>
+		</image>
+		<!-- <text name="md_name" extra="true">
+			<pos>0.5 0.015</pos>
+			<size>1 0.03</size>
+			<verticalAlignment>center</verticalAlignment>
+			<horizontalAlignment>center</horizontalAlignment>
+			<color>FFFFFF1F</color>
+			<fontSize>0.024</fontSize>
+			<glowSize>0</glowSize>
+		</text> -->
+
+	<!-- Второй контейнер с иконками и текстом издателя, разработчика -->
+	<container name="container-gamedata2">
+		<pos>0.665 0.21</pos>
+		<pos if="${screen.ratio} == '4/3'">0.65 0.21</pos>
+		<size>0.30 0.05</size>
+		<zIndex>150</zIndex>
+		
+		<!-- Разработчик (если не = издателю) -->
+		<container name="developer-container" visible="{game:publisher} != {game:developer} &amp;&amp; !empty({game:developer})">
+		<pos>0 0</pos>
+			<text>
+				<fontSize>0.024</fontSize>
+				<fontSize if="${screen.ratio} == '4/3'">0.03</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>{game:developer}</text>
+				<color>808080FF</color>
+				<size>1 1</size>
+				<alignment>center</alignment>
+				<multiLine>false</multiLine>
+				<autoScrollDelay>3000</autoScrollDelay>
+				<singleLineScroll>true</singleLineScroll>
+				<glowColor>00000035</glowColor>
+				<glowSize>1</glowSize>
+				<glowOffset>3 2</glowOffset>
+			</text>
+		</container>
+		
+		<!-- Если издатель == разработчик -->
+		<container name="dev-pub-container" visible="{game:publisher} == {game:developer} &amp;&amp; !empty({game:developer})">
+		<pos>0 0</pos>
+			<text>
+				<fontSize>0.024</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>{game:developer}</text>
+				<color>808080FF</color>
+				<size>1 1</size>
+				<alignment>center</alignment>
+				<multiLine>false</multiLine>
+				<autoScrollDelay>3000</autoScrollDelay>
+				<singleLineScroll>true</singleLineScroll>
+				<glowColor>00000035</glowColor>
+				<glowSize>1</glowSize>
+				<glowOffset>3 2</glowOffset>
+			</text>
+		</container>
+	</container>
+
+		<video name="md_video">
+			<pos>0.815 0.455</pos>
+			<maxSize>0.30 0.383</maxSize>
+			<pos if="${screen.ratio} == '4/3'">0.80 0.455</pos>
+			<origin>0.5 0.5</origin>
+			<delay>1.0</delay>
+			<showSnapshotNoVideo>false</showSnapshotNoVideo>
+			<showSnapshotDelay>true</showSnapshotDelay>
+			<snapshotSource>image</snapshotSource>
+			<effect>none</effect>
+			<zIndex>110</zIndex>
+			<loops>0</loops>
+			<storyboard event="activateNext">
+				<animation property="opacity" from="0" to="1" begin="0" duration="300" mode="linear"/>
+			</storyboard>
+			<storyboard event="activatePrev">
+				<animation property="opacity" from="0" to="1" begin="0" duration="300" mode="linear"/>
+			</storyboard>
+			<shader>
+				<path>:/shaders/border.glsl</path>
+				<cornerRadius>0.01</cornerRadius>
+				<innerShadowSize>0.01</innerShadowSize>
+				<innerShadowColor>00000030</innerShadowColor>
+				<outerShadowSize>0.020</outerShadowSize>
+				<outerShadowColor>00000050</outerShadowColor>
+			</shader>
+		</video>
+		<text name="md_description">
+			<fontPath>${fontNameReg}</fontPath>
+			<pos>0.665 0.66</pos>
+			<size>0.3 0.22</size>
+			<fontSize>0.024</fontSize>
+			<pos if="${screen.ratio} == '4/3'">0.65 0.66</pos>
+			<fontSize if="${screen.ratio} == '4/3'">0.03</fontSize>
+			<color>A0A0B0</color>
+			<lineSpacing>1.1</lineSpacing>
+			<visible>true</visible>
+		</text>
+		
+		<!-- Панель с рейтингом, годом и т.д. -->
+		<stackpanel name="container-stars">
+			<separator>0.01</separator>
+			<pos>0.665 0.89</pos>
+			<size>0.298 0.032</size>
+			<pos if="${screen.ratio} == '4/3'">0.65 0.89</pos>
+			<size if="${screen.ratio} == '4/3'">0.298 0.042</size>
+			<orientation>horizontal</orientation>
+			<zIndex>150</zIndex>
+			
+			<!-- Год выпуска -->
+			<image>
+				<path>${themePath}/_inc/images/game_info_releasedate.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<padding>0 0</padding>
+				<maxSize>1 1</maxSize>
+				<visible>!empty({game:releaseyear})</visible>
+			</image>
+			<text>
+				<pos>0.08 0</pos> <!-- Сдвигает текст правее иконки -->
+				<fontSize>0.022</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>{game:releaseyear}</text>
+				<color>666666</color>
+				<padding>4 0 4 0</padding>
+				<multiLine>false</multiLine>
+				<autoScrollDelay>3000</autoScrollDelay>
+				<singleLineScroll>true</singleLineScroll>
+				<visible>!empty({game:releaseyear})</visible>
+				<!-- 4:3 -->
+				<pos if="${screen.ratio} == '4/3'">0.1 0</pos>
+				<fontSize if="${screen.ratio} == '4/3'">0.027</fontSize>
+			</text>
+			
+			<!-- Рейтинг -->
+			<text name="gamedata-stars">
+				<fontSize>0.028</fontSize>
+				<text>{game:stars}</text>
+				<color>666666</color>
+				<padding>4 0 8 0</padding>
+				<visible>!empty({game:stars})</visible>
+				<visible if="${screen.ratio} == '4/3'">false</visible>
+			</text>
+			
+			<!-- Жанр -->
+			<image>
+				<path>${themePath}/_inc/images/game_info_genre.svg</path>
+				<linearSmooth>true</linearSmooth>
+				<color>666666</color>
+				<padding>0 0</padding>
+				<maxSize>1 1</maxSize><pos>0.48 0</pos>
+				<visible>!empty({game:genre})</visible>
+			</image>
+			<text>
+				<pos>0.08 0</pos> <!-- Сдвигает текст правее иконки -->
+				<fontSize>0.022</fontSize>
+				<fontPath>${fontNameReg}</fontPath>
+				<text>{game:genre}</text>
+				<color>666666</color>
+				<padding>4 0 4 0</padding>
+				<multiLine>false</multiLine>
+				<autoScrollDelay>3000</autoScrollDelay>
+				<singleLineScroll>true</singleLineScroll>
+				<visible>!empty({game:genre})</visible>
+				<!-- 4:3 -->
+				<pos if="${screen.ratio} == '4/3'">0.1 0</pos>
+				<fontSize if="${screen.ratio} == '4/3'">0.027</fontSize>
+			</text>
+		</stackpanel>
+	</customView>
+</theme>

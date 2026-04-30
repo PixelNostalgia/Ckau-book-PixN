@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<formatVersion>7</formatVersion>
+<!-- Шапка + Видео + Полный список -->
+<customView name="WallpapersHeroesFullListHor" inherits="WallpapersHeroesListHor" displayName="${WallpapersHeroesFullListHorName}">
+		<textlist name="gamelist">
+			<pos>0.747 0.241</pos>
+			<size>0.239 0.675</size>
+			<lines>19</lines>
+			<zIndex>180</zIndex>
+			<fontPath>${fontNameBold}</fontPath>
+			<!-- 4:3 -->
+			<pos if="${screen.ratio} == '4/3'">0.747 0.241</pos>
+			<size if="${screen.ratio} == '4/3'">0.239 0.675</size>
+			<lines if="${screen.ratio} == '4/3'">13</lines>
+			<fontSize if="${screen.ratio} == '4/3'">0.03</fontSize>
+		</textlist>
+		<image name="gamelist-background">
+			<visible>true</visible>
+			<pos>0.735 0</pos>
+			<color>141414CC</color>
+			<zIndex>62</zIndex>
+		</image>
+		<image name="md_marquee">
+			<visible>false</visible>
+		</image>
+		
+		<text name="folderpath">
+			<pos>0.747 0.22</pos>
+			<size>0.239 0.02</size>
+		</text>
+		<text name="filterInfo">
+			<pos>0.747 0.20</pos>
+			<size>0.239 0.02</size>
+		</text>
+		<image name="logo">
+			<pos>0.862 0.152</pos>
+			<maxSize>0.200 0.126</maxSize>
+		</image>
+		<!-- Logo anim bzz -->
+		<image name="logo1">
+			<pos>0.862 0.152</pos>
+			<maxSize>0.200 0.126</maxSize>
+		</image>
+	</customView>
+</theme>
