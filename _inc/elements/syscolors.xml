@@ -186,7 +186,7 @@
 		<sysColor if="${system.theme} == 'gba2players'">4e75d8</sysColor>
 		<sysColor if="${system.theme} == 'gbah'">4e75d8</sysColor>
 		<sysColor if="${system.theme} == 'gbc'">f5ba2d</sysColor>
-		<sysColor if="${system.theme} == 'gbch'">f5ba2d</sysColor>
+		<sysColor if="${system.theme} == 'gbch'">8a2be2</sysColor>
 		<sysColor if="${system.theme} == 'gbc2players'">f5ba2d</sysColor>
 		<sysColor if="${system.theme} == 'gbh'">9fa497</sysColor>
 		<sysColor if="${system.theme} == 'gc' || ${system.theme} == 'gamecube'">9583f0</sysColor>
@@ -194,6 +194,7 @@
 		<sysColor if="${system.theme} == 'gc-jp'">9583f0</sysColor>
 		<sysColor if="${system.theme} == 'gemrb'">47574a</sysColor>
 		<sysColor if="${system.theme} == 'genesis'">0e7cce</sysColor>
+		<sysColor if="${system.theme} == 'genesis_top'">e03e3a</sysColor>
 		<sysColor if="${system.theme} == 'genh'">0e7cce</sysColor>
 		<sysColor if="${system.theme} == 'ggh'">9583f0</sysColor>
 		<sysColor if="${system.theme} == 'gmaster'">83a9b0</sysColor>
@@ -248,6 +249,7 @@
 		<sysColor if="${system.theme} == 'megadrive-msu' || ${system.theme} == 'msu-md'">0e7cce</sysColor>
 		<sysColor if="${system.theme} == 'megadrive'">0e7cce</sysColor>
 		<sysColor if="${system.theme} == 'megadrive-jp'">0e7cce</sysColor>
+		<sysColor if="${system.theme} == 'megadriveh'">0e7cce</sysColor>
 		<sysColor if="${system.theme} == 'megadrive_top'">e03e3a</sysColor>
 		<sysColor if="${system.theme} == 'megaduck'">16adaf</sysColor>
 		<sysColor if="${system.theme} == 'microvsn'">3886b3</sysColor>
@@ -501,7 +503,7 @@
 		<sysColor if="${system.theme} == 'x1'">e8b229</sysColor>
 		<sysColor if="${system.theme} == 'x68000'">6c6e72</sysColor>
 		<sysColor if="${system.theme} == 'xash3d_fwgs' || ${system.theme} == 'halflife'">e8b229</sysColor>
-		<sysColor if="${system.theme} == 'xbla'">92b71d</sysColor>
+		<sysColor if="${system.theme} == 'xbla'">57af50</sysColor>
 		<sysColor if="${system.theme} == 'xbox'">309496</sysColor>
 		<sysColor if="${system.theme} == 'xbox360'">80ccea</sysColor>
 		<sysColor if="${system.theme} == 'xboxone'">57af50</sysColor>
@@ -517,6 +519,7 @@
 		<sysColor if="${system.theme} == 'ussrarcade'">d16354</sysColor>
 		<sysColor if="${system.theme} == 'iortcw'">606863</sysColor>
 		<sysColor if="${system.theme} == 'mamelite'">5a5fba</sysColor>
+		<sysColor if="${system.theme} == 'mame-aknf'">5a5fba</sysColor>
 		<sysColor if="${system.theme} == 'oric'">7c848d</sysColor>
 		<sysColor if="${system.theme} == 'zc210'">5ea56f</sysColor>
 		<sysColor if="${system.theme} == '3players'">82cdea</sysColor>
