@@ -19,6 +19,9 @@
 		<text name="TextDate">
 			<text>1997</text>
 		</text>
+		<text name="TextManufacturer">
+			<text>All Killer No Filler Collection</text>
+		</text>
 		<text name="TextName">
 			<text>MAME</text>
 		</text>
