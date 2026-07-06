@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<view name="system">
+		<image name="sysbg-video">
+			<pos>0.5 0.41</pos>
+			<size>0.35 0.35</size>
+			<size if="${screen.ratio} == '16/10'">0.39 0.35</size>
+			<size if="${screen.ratio} == '4/3'">0.47 0.35</size>
+			<size if="${screen.ratio} == '21/9'">0.264 0.35</size>
+		</image>
+		<video name="videobox">
+			<pos>0.5 0.41</pos>
+			<maxSize>0.351</maxSize>
+			<maxSize if="${screen.ratio} == '16/10'">0.391</maxSize>
+			<maxSize if="${screen.ratio} == '4/3'">0.47</maxSize>
+		</video>
+		<text name="TextDate">
+			<text>2015</text>
+		</text>
+		<text name="TextManufacturer">
+			<text>itch corp</text>
+		</text>
+		<text name="TextName">
+			<text>itch.io</text>
+		</text>
+		<text name="TextDesc">
+			<text>itch.io is an open marketplace for independent digital creators with a focus on independent video games. It’s a platform that enables anyone to sell the content they've created.
+			
+			itch.io is also a collection of some of the most unique, interesting, and independent creations you'll find on the web. We're not your typical digital storefront, with a wide range of both paid and free content, we encourage you to look around and see what you find.</text>
+		</text>
+	</view>
+</theme>
