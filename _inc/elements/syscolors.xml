@@ -530,6 +530,7 @@
 		<sysColor if="${system.theme} == 'arcade-classics'">ce413e</sysColor>
 		<sysColor if="${system.theme} == 'arcade-killer'">7e5bd6</sysColor>
 		<sysColor if="${system.theme} == 'beatemup'">ce3d3d</sysColor>
+		<sysColor if="${system.theme} == 'doom'">3f5a9c</sysColor>
 		<sysColor if="${system.theme} == 'fighting'">d64444</sysColor>
 		<sysColor if="${system.theme} == 'platform'">77858f</sysColor>
 		<sysColor if="${system.theme} == 'puzzle'">5c61bd</sysColor>
