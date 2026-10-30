@@ -110,6 +110,7 @@ originally based on:	art from "Colorful" by viking (https://forums.launchbox-app
 	<include>./_inc/views/gamecarousel.xml</include>
 	<include>./_inc/views/detailed.xml</include>
 	<include>./_inc/views/DetailedDark.xml</include>
+	<include>./_inc/views/PixNcarousel.xml</include>
 	<!-- <include>./_inc/views/DetailedNoVideo.xml</include> -->
 	<include>./_inc/views/DetailedWheel.xml</include>
 	<include>./_inc/views/GridDetails.xml</include>
