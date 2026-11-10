@@ -16,7 +16,9 @@
 			<maxSize if="${screen.ratio} == '4/3'">0.506</maxSize>
 			<maxSize if="${screen.ratio} == '21/9'">0.282</maxSize>
 		</video>
-		<text name="TextDate"/>
+		<text name="TextDate">
+			<text>2000</text>
+		</text>
 		<text name="TextManufacturer">
 			<text>Namco</text>
 		</text>

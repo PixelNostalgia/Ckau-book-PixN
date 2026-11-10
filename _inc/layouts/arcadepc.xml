@@ -36,7 +36,7 @@
 			<maxSize if="${screen.ratio} == '21/9'">0.23</maxSize>
 		</video>
 		<text name="TextDate">
-			<text/>
+			<text>2000</text>
 		</text>
 		<text name="TextManufacturer">
 			<text/>

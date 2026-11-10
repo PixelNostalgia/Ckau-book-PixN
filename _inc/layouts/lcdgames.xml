@@ -14,7 +14,7 @@
 			<maxSize>0.25</maxSize>
 		</video>
 		<text name="TextDate">
-			<text/>
+			<text>1979</text>
 		</text>
 		<text name="TextName">
 			<text>LCD Games</text>

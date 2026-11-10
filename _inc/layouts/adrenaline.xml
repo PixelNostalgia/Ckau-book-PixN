@@ -32,6 +32,9 @@
 			<maxSize if="${screen.ratio} == '4/3'">0.41</maxSize>
 			<maxSize if="${screen.ratio} == '21/9'">0.23</maxSize>
 		</video>
+		<text name="TextDate">
+			<text>2010</text>
+		</text>
 		<text name="TextManufacturer">
 			<text>Adrenaline Amusements Inc.</text>
 		</text>
